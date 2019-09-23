@@ -1,0 +1,23 @@
+package com.popit.persistence;
+
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
+
+import com.popit.domain.UserVO;
+
+@Repository
+public class UserDAOImpl implements UserDAO {
+
+	@Inject
+	private SqlSession session;
+	
+	private static String namespace = "com.popit.mapper.UserMapper";
+	
+	@Override
+	public void insertUser(UserVO vo) throws Exception {
+		session.insert(namespace+ ".insertUser", vo);
+	}
+
+}
