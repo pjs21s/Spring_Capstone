@@ -6,13 +6,14 @@
 <title>글쓰기</title>
 </head>
 <body>
-<form method = "post"> 
-<p><label>제목</label><input type="text" name ="title"></p>
-<p><label>작성자</label><input type="text" name="writer" size="15">
-</p>
-<label>내용</label><p>
-<textarea name="content"></textarea><p>
+<form method = "post">
+<div class="form-group">
+제목<input class="form-control" type="text" name ="title">
+작성자<input class="form-control" type="text" name="writer" size="15">
+
+내용<textarea class="form-control" name="content"></textarea><p>
 <button type ="submit" class="btn btn-primary">등록</button>
+</div>
 </form>
 </body>
 </html>

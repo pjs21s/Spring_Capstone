@@ -8,19 +8,16 @@
 </head>
 <body>
 <form>
-<p><label>글번호</label> <input type="text" name ="bno" value ="${boardVO.bno}" readonly="readonly"></p>
+<div class="form-group">
+<p>글번호<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" readonly="readonly"></p>
+<p>제목<input class="form-control" type="text" name ="title" value ="${boardVO.title}" readonly="readonly"></p>
+<p>작성자<input class="form-control" type="text" name="writer" value = "${boardVO.writer}"readonly="readonly"></p>
+</div>
+<p>내용<textarea class="form-control" name=content readonly="readonly">${boardVO.content}</textarea><br></p>
 
-<p><label>제목</label> <input type="text" name ="title" value ="${boardVO.title}" readonly="readonly"></p>
-
-<p><label>작성자</label> <input type="text" name="writer" value = "${boardVO.writer}"readonly="readonly"><p>
-
-<label>내용</label> <textarea name=content  readonly="readonly">${boardVO.content}</textarea><br>
-
-<button type="submit" class="btn" formaction="modify" formmethod="get">수정</button>
-
-<button type="submit" class="btn" formaction="remove" formmethod="post">삭제</button>
-
-<button type="submit" class="btn" formaction="listAll" formmethod="get">목록</button>
+<button type="submit" class="btn btn-warning" formaction="modify" formmethod="get">수정</button>
+<button type="submit" class="btn btn-danger" formaction="remove" formmethod="post">삭제</button>
+<button type="submit" class="btn btn-primary" formaction="listAll" formmethod="get">목록</button>
 </form>
 </body>
 </html>

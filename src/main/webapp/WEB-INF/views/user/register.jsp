@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-
 </head>
 <body>
 <form method="post">
-	email<input type = "email" name = "email"><br>
-	password<input type = "password" name = "password"><br>
-	name<input type = "text" name = "name"><br>
-	<input type = "submit" value = "회원가입">
+<div class="form-group">
+	이메일 <input class="form-control" type = "email" name = "email"><br>
+	비밀번호 <input class="form-control" type = "password" name = "password"><br>
+	이름 <input class="form-control" type = "text" name = "name"><br>
+	<button type ="submit" class="btn btn-primary">회원가입</button>
+</div>
 </form>
 </body>
 </html>
