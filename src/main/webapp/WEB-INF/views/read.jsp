@@ -17,7 +17,7 @@
 
 <button type="submit" class="btn btn-warning" formaction="modify" formmethod="get">수정</button>
 <button type="submit" class="btn btn-danger" formaction="remove" formmethod="post">삭제</button>
-<button type="submit" class="btn btn-primary" formaction="listAll" formmethod="get">목록</button>
+<button type="submit" class="btn btn-primary" formaction="list" formmethod="get">목록</button>
 </form>
 </body>
 </html>

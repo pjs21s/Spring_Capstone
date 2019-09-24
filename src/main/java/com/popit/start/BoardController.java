@@ -13,61 +13,152 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.popit.domain.BoardVO;
 import com.popit.domain.Criteria;
 import com.popit.domain.PageMaker;
+import com.popit.domain.SearchCriteria;
 import com.popit.service.BoardService;
 
-@Controller
-@RequestMapping(value="/")
+@Controller // 컨트롤러임을 명시
+
+@RequestMapping(value = "/") // 주소 패턴
+
 public class BoardController {
+
 	
-	@Inject
-	private BoardService service;
+
 	
-	@RequestMapping(value="/listAll", method = RequestMethod.GET)
-	public void listAll(Model model) throws Exception{
-		model.addAttribute("list", service.listAll());
-	}
+
+	@Inject   // 주입(심부름꾼) 명시
+
+	private BoardService service; // Service 호출을 위한 객체생성
+
 	
-	@RequestMapping(value = "/regist", method = RequestMethod.GET)
-	public void registerGET(BoardVO board, Model model) throws Exception {
+
+	@RequestMapping(value= "/listAll", method = RequestMethod.GET) // 주소 호출 명시 . 호출하려는 주소 와 REST 방식설정 (GET)
+
+	public void listAll(Model model)throws Exception { // 메소드 인자값은 model 인터페이스(jsp전달 심부름꾼)
+
 		
-	}
-	
-	@RequestMapping(value = "/regist", method = RequestMethod.POST)
-	public String registPOST(BoardVO board, RedirectAttributes rttr) throws Exception {
-		service.regist(board);
+
+		model.addAttribute("list",service.listAll()); // jsp에 심부름할 내역(서비스 호출)
+
 		
-		return "redirect:/listPage";
+
 	}
+
 	
-	@RequestMapping(value = "/read", method = RequestMethod.GET)
-	public void read(@RequestParam("bno") int bno, Model model) throws Exception {
-		model.addAttribute(service.read(bno));
+
+	@RequestMapping(value = "/regist", method = RequestMethod.GET) // GET 방식으로 페이지 호출
+
+	  public void registerGET(BoardVO board, Model model) throws Exception {
+
+	
+
 	}
-	
-	@RequestMapping(value = "/modify", method = RequestMethod.GET)
-	public void modifyGET(int bno, Model model) throws Exception {
-		model.addAttribute(service.read(bno));
+
+
+	@RequestMapping(value = "/regist", method = RequestMethod.POST) // POST방식으로 내용 전송
+
+	  public String registPOST(BoardVO board, RedirectAttributes rttr) throws Exception { // 인자값으로 REDIRECT 사용 
+
+	    
+
+		  service.regist(board); // 글작성 서비스 호출
+
+	    	    
+
+	    return "redirect:/list"; // 작성이 완료된 후, 목록페이지로 리턴
+
 	}
+
 	
-	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public String modifyPost(BoardVO board, RedirectAttributes rttr) throws Exception {
-		service.modify(board);
-		return "redirect:/listPage";
-	}
-	
-	@RequestMapping(value = "/remove", method = RequestMethod.POST)// POST방식으로 데이터 전송
-	  public String removePOST(@RequestParam("bno") int bno, RedirectAttributes rttr) throws Exception{
-		  service.remove(bno); // 글삭제 서비스 호출		  
-		  return "redirect:/listPage"; // 삭제가 완료된 후, 목록페이지로 리턴
+
+	@RequestMapping(value = "/read", method = RequestMethod.GET) // GET 방식으로 페이지 호출
+
+	  public void read(@RequestParam("bno")int bno, Model model) throws Exception{
+
+		  // 인자값은 파라미터 값으로 기본키인 글번호를 기준으로 Model을 사용하여 불러옴
+
+		model.addAttribute(service.read(bno)); // read 서비스 호출
+
+		 
+
 	  }
+
 	
-	@RequestMapping(value="/listPage", method=RequestMethod.GET)
-	public void listPage(@ModelAttribute("cri") Criteria cri, Model model) throws Exception{
-		model.addAttribute("list", service.listCriteria(cri));
-		PageMaker pageMaker = new PageMaker();
-		pageMaker.setCri(cri);
-		pageMaker.setTotalCount(service.listCountCriteria(cri));
-	
-		model.addAttribute("pageMaker", pageMaker);
-	}
+
+	  @RequestMapping(value = "/modify", method = RequestMethod.GET) // GET 방식으로 페이지 호출
+
+	  public void modifyGET(int bno, Model model) throws Exception {
+
+		
+
+	    model.addAttribute(service.read(bno)); // 수정을 위한 글읽기 서비스 호출
+
+	  }
+
+	  
+
+	  
+
+	  @RequestMapping(value = "/modify", method = RequestMethod.POST)// POST방식으로 데이터 전송
+
+	  public String modifyPOST(BoardVO board, RedirectAttributes rttr) throws Exception {
+
+		  
+
+	    service.modify(board); // 글수정 서비스 호출
+
+
+	    return "redirect:/list"; // 수정이 완료된 후, 목록페이지로 리턴
+
+	  }
+
+	  
+
+	  @RequestMapping(value = "/remove", method = RequestMethod.POST)// POST방식으로 데이터 전송
+
+	  public String removePOST(@RequestParam("bno") int bno, RedirectAttributes rttr) throws Exception{
+
+		  service.remove(bno); // 글삭제 서비스 호출
+
+		  
+
+		  return "redirect:/list"; // 삭제가 완료된 후, 목록페이지로 리턴
+
+		  
+
+	  }
+
+	  
+
+
+	  @RequestMapping(value = "/listPage", method = RequestMethod.GET)
+
+	  public void listPage(@ModelAttribute("cri") Criteria cri, Model model) throws Exception {
+
+
+	    model.addAttribute("list", service.listCriteria(cri)); // JSP에 계산된 페이징 출력
+
+	    PageMaker pageMaker = new PageMaker(); // 객체생성
+
+	    pageMaker.setCri(cri); // setCri 메소드 사용
+
+	    pageMaker.setTotalCount(service.listCountCriteria(cri)); // 전체 게시글 갯수 카운트
+
+
+	    model.addAttribute("pageMaker", pageMaker);
+
+	  }
+
+	  @RequestMapping(value = "/list", method = RequestMethod.GET)
+	  public void listPage(@ModelAttribute("cri") SearchCriteria cri, Model model) throws Exception {
+	    model.addAttribute("list", service.listSearchCriteria(cri)); //전체목록에 검색페이징 기능+
+	    PageMaker pageMaker = new PageMaker();
+	    pageMaker.setCri(cri);
+	    pageMaker.setTotalCount(service.listSearchCount(cri));//전체목록에 검색페이징 카운트+
+	    model.addAttribute("pageMaker", pageMaker);
+
+	  }
+
+
+
 }

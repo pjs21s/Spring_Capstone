@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.popit.domain.BoardVO;
 import com.popit.domain.Criteria;
+import com.popit.domain.SearchCriteria;
 
 
 public interface BoardService {
@@ -20,4 +21,8 @@ public interface BoardService {
 	public List<BoardVO> listCriteria(Criteria cri) throws Exception;
 	
 	public int listCountCriteria(Criteria cri) throws Exception;
+	
+	public List<BoardVO> listSearchCriteria(SearchCriteria cri)  throws Exception;
+
+	public int listSearchCount(SearchCriteria cri) throws Exception;
 }

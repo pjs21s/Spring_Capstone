@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.popit.domain.BoardVO;
 import com.popit.domain.Criteria;
+import com.popit.domain.SearchCriteria;
 
 public interface BoardDAO {
 	public void create(BoardVO vo) throws Exception;
@@ -23,4 +24,8 @@ public interface BoardDAO {
 	public List<BoardVO> listCriteria(Criteria cri) throws Exception;
 	
 	public int countPaging(Criteria cri) throws Exception;
+	
+	public List<BoardVO> listSearch(SearchCriteria cri) throws Exception;
+	
+	public int listSearchCount(SearchCriteria cri) throws Exception;
 }
