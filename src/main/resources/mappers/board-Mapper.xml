@@ -7,7 +7,7 @@ insert into tbl_board (title, content, writer)
 values(#{title}, #{content}, #{writer})
 </insert>
 
-<select id="read" resultType="com.popit.domain.BoardVO">
+<select id="read" resultType="BoardVO">
 select bno, title, content, writer, regdate, viewcnt
 from tbl_board
 where bno = #{bno}
@@ -28,7 +28,7 @@ where bno = #{bno}
 delete from tbl_board where bno = #{bno}
 </delete>
 
-<select id="listAll" resultType="com.popit.domain.BoardVO">
+<select id="listAll" resultType="BoardVO">
 <![CDATA[
 select bno, title, content, writer, regdate, viewcnt
 from tbl_board
@@ -36,5 +36,31 @@ where bno > 0 order by bno desc, regdate desc
 ]]>
 </select>
 
+<select id="listPage" resultType="BoardVO">
+<![CDATA[
+select bno, title, content, writer, regdate, viewcnt
+from tbl_board
+where bno > 0
+order by bno desc, regdate desc
+limit #{page}, 10
+]]>
+</select>
 
+<select id="listCriteria" resultType="BoardVO">
+<![CDATA[
+select bno, title, content, writer, regdate, viewcnt
+from tbl_board
+where bno > 0
+order by bno desc, regdate desc
+limit #{pageStart}, #{perPageNum}
+]]>
+</select>
+
+<select id="countPaging" resultType="int">
+<![CDATA[
+select count(bno)
+from tbl_board
+where bno > 0
+]]>
+</select>
 </mapper>

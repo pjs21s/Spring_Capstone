@@ -32,4 +32,9 @@ public class UserController {
 		
 		return "redirect:/";
 	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public void LoginGET(UserVO user, Model model) {
+		
+	}
 }

@@ -4,10 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>프로필</title>
 </head>
 <body>
-
+프로필
 </body>
 </html>
