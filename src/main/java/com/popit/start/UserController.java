@@ -2,6 +2,7 @@ package com.popit.start;
 
 import javax.inject.Inject;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -27,13 +28,15 @@ public class UserController {
 	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public String RegisterPost(UserVO user, RedirectAttributes rttr) throws Exception{
+		
+		String hashedPw = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+		user.setPassword(hashedPw);
 		service.insertUser(user);
 	
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value="/login", method=RequestMethod.GET)
-	public void LoginGET(UserVO user, Model model) {
-		
-	}
+	
+	
+	
 }

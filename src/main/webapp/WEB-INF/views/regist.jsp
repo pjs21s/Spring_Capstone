@@ -8,10 +8,13 @@
 <body>
 <form method = "post">
 <div class="form-group">
-제목<input class="form-control" type="text" name ="title">
-작성자<input class="form-control" type="text" name="writer" size="15">
+<label>제목</label>
+<input class="form-control" type="text" name ="title" required>
+<label>작성자</label>
+<input class="form-control" type="text" name ="writer" required>
+<label>내용</label>
+<textarea class="form-control" name="content" required></textarea>
 
-내용<textarea class="form-control" name="content"></textarea><p>
 <button type ="submit" class="btn btn-primary">등록</button>
 </div>
 </form>

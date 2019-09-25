@@ -14,10 +14,12 @@
 <p>작성자<input class="form-control" type="text" name="writer" value = "${boardVO.writer}"readonly="readonly"></p>
 </div>
 <p>내용<textarea class="form-control" name=content readonly="readonly">${boardVO.content}</textarea><br></p>
-
 <button type="submit" class="btn btn-warning" formaction="modify" formmethod="get">수정</button>
 <button type="submit" class="btn btn-danger" formaction="remove" formmethod="post">삭제</button>
 <button type="submit" class="btn btn-primary" formaction="list" formmethod="get">목록</button>
 </form>
+<p>태그</p>
+
+
 </body>
 </html>
