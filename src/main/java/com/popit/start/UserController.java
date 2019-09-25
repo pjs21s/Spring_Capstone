@@ -14,7 +14,7 @@ import com.popit.domain.UserVO;
 import com.popit.service.UserService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/user/*")
 public class UserController {
 	
 	@Inject
@@ -27,9 +27,8 @@ public class UserController {
 	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public String RegisterPost(UserVO user, RedirectAttributes rttr) throws Exception{
-
 		service.insertUser(user);
-		
+	
 		return "redirect:/";
 	}
 	
