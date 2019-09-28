@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.popit.domain.BoardVO;
-import com.popit.domain.Criteria;
 import com.popit.domain.PageMaker;
 import com.popit.domain.SearchCriteria;
 import com.popit.service.BoardService;

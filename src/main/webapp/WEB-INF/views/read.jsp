@@ -19,7 +19,7 @@
 <button type="submit" class="btn btn-primary" formaction="list" formmethod="get">목록</button>
 </form>
 <p>태그</p>
-
+<p>댓글</p>
 
 </body>
 </html>

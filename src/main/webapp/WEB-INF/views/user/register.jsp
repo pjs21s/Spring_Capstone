@@ -3,22 +3,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<style>
+input {font-size: 3rem;}
+</style>
 </head>
 <body>
+
 <form method="post">
 <div class="form-group">
-	<label for="validationCustom01">이메일</label>
-	<input class="form-control" id="validationCustom01" placeholder="이메일" name="email" type="email" required>
-      
-    <label for="validationCustom02">비밀번호</label>
-	<input type="password" class="form-control" id="validationCustom02" placeholder="비밀번호" name="password" required>
-      
-    <label for="validationCustom03">이름</label>
-	<input type="text" class="form-control" id="validationCustom03" placeholder="비밀번호" name="name" required>
+
+	<input class="form-control" placeholder="이메일" name="email" type="email" required>
+
+	<input type="password" class="form-control" placeholder="비밀번호" name="password" required>
+
+	<input type="text" class="form-control" placeholder="이름" name="name" required>
 
 	<button type ="submit" class="btn btn-primary">회원가입</button>
 </div>
 </form>
+
 </body>
 </html>

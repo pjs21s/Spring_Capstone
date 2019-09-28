@@ -3,8 +3,6 @@ package com.popit.start;
 import javax.inject.Inject;
 
 import org.mindrot.jbcrypt.BCrypt;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,8 +30,9 @@ public class UserController {
 		String hashedPw = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
 		user.setPassword(hashedPw);
 		service.insertUser(user);
+		rttr.addFlashAttribute("msg", "Registered");
 	
-		return "redirect:/";
+		return "redirect:/user/login";
 	}
 	
 	

@@ -8,12 +8,17 @@
 <body>
 <form action="${path}/user/loginPost" method="post">
 <div class="form-group">
-	<label>이메일</label>
- 	<input class="form-control" type ="email" name ="email" required>
-	<label>비밀번호</label>
-	<input class="form-control" type ="password" name ="password" required>
-	<button type ="submit" class="btn btn-primary">로그인</button>
+ 	<input class="form-control" placeholder="이메일" type ="email" name ="email" required>
+	<input class="form-control" placeholder="비밀번호" type ="password" name ="password" required>
+	<button type="submit" class="btn btn-primary">로그인</button>
 </div>
 </form>
+
+<script>
+var msg = "${msg}";
+if(msg === "Registered"){
+	alert("회원가입이 완료되었습니다. 로그인해주세요.")
+}
+</script>
 </body>
 </html>
