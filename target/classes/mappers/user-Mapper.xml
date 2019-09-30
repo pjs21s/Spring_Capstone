@@ -13,6 +13,6 @@ values(#{email}, #{password}, #{name})
 </insert>
 
 <select id="login" resultMap="userVOResultMap">
-select * from user where user_email = #{email}
+select * from USER where user_email = #{email}
 </select>
 </mapper>
