@@ -7,7 +7,7 @@ request.setCharacterEncoding("UTF-8");
 <%@ include file="/WEB-INF/views/header.jsp" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>쓰담쓰담</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@ request.setCharacterEncoding("UTF-8");
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="list">전체보기</a>
+        <a class="nav-link" href="list">질문하고 답변하기</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">태그별 보기</a>
@@ -69,7 +69,6 @@ request.setCharacterEncoding("UTF-8");
     </form>
   </div>
 </nav>
-
 <script type="text/javascript">
 	$(document).ready(
 		function() {

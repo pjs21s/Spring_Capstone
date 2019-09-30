@@ -3,24 +3,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-input {font-size: 3rem;}
-</style>
 </head>
 <body>
+<div class="cotainer">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-header">회원가입</div>
+					<div class="card-body">
+						<form method="post">
+							<div class="form-group row">
+								<div class="col-md-6 offset-md-4">
+									<input type="text" id="email_address" class="form-control"
+										name="email" placeholder="이메일" required autofocus>
+								</div>
+							</div>
 
-<form method="post">
-<div class="form-group">
+							<div class="form-group row">
+								<div class="col-md-6 offset-md-4">
+									<input type="password" id="password" class="form-control"
+										name="password" placeholder="비밀번호" required>
+								</div>
+							</div>
+							
+							<div class="form-group row">
+								<div class="col-md-6 offset-md-4">
+									<input type="text" id="name" class="form-control"
+										name="name" placeholder="이름" required>
+								</div>
+							</div>
 
-	<input class="form-control" placeholder="이메일" name="email" type="email" required>
-
-	<input type="password" class="form-control" placeholder="비밀번호" name="password" required>
-
-	<input type="text" class="form-control" placeholder="이름" name="name" required>
-
-	<button type ="submit" class="btn btn-primary">회원가입</button>
-</div>
-</form>
+							<div class="col-md-6 offset-md-4">
+								<button type="submit" class="btn btn-primary">회원가입</button>
+							</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

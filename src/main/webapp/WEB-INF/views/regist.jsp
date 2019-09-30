@@ -9,18 +9,19 @@
 </head>
 <body>
 <form method="post">
-<div class="form-group">
-<label>제목</label>
-<input class="form-control" type="text" name ="title" required>
-<label>작성자</label>
-<input class="form-control" type="text" name ="writer" required>
-<label>내용</label>
-<textarea class="form-control" name="content" required></textarea>
-
-<button type ="submit" class="btn btn-primary">등록</button>
-</div>
+	<!-- Page Content -->
+	<div class="container form-group">
+		<div class="row">
+			<!-- Post Content Column -->
+			<div class="col-lg-8">
+			<input class="form-control" type="text" name ="title" placeholder="제목" required>
+			<input class="form-control" type="text" name ="writer" placeholder="작성자" required>
+			<textarea class="form-control" name="content" required>당신의 이야기를 들려주세요</textarea>
+			<button type ="submit" class="btn btn-primary">등록</button>
+			</div>
+		</div>
+	</div>
 </form>
-
 <script>
 CKEDITOR.replace('content');
 </script>
