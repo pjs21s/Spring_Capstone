@@ -12,17 +12,17 @@ import com.popit.persistence.UserDAO;
 public class UserServiceImpl implements UserService {
 
 	@Inject
-	private UserDAO dao;
+	private UserDAO userdao;
 	
 	@Override
-	public void insertUser(UserVO user) throws Exception {
-		dao.insertUser(user);
+	public void insertUser(UserVO uservo) throws Exception {
+		userdao.insertUser(uservo);
 	}
 
 
 	@Override
 	public UserVO login(LoginDTO loginDTO) throws Exception {
-		return dao.login(loginDTO);
+		return userdao.login(loginDTO);
 	}
 
 }

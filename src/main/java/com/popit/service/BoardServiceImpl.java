@@ -15,52 +15,52 @@ import com.popit.persistence.BoardDAO;
 public class BoardServiceImpl implements BoardService {
 	
 	@Inject
-	private BoardDAO dao;
+	private BoardDAO boarddao;
 
 	@Override
-	public void regist(BoardVO board) throws Exception {
-		dao.create(board);
+	public void regist(BoardVO boardvo) throws Exception {
+		boarddao.create(boardvo);
 	}
 
 	@Override
 	public BoardVO read(Integer bno) throws Exception {
-		dao.updateViewCnt(bno);
-		return dao.read(bno);
+		boarddao.updateViewCnt(bno);
+		return boarddao.read(bno);
 	}
 
 	@Override
-	public void modify(BoardVO board) throws Exception {
-		dao.update(board);
+	public void modify(BoardVO boardvo) throws Exception {
+		boarddao.update(boardvo);
 	}
 	
 	@Override
 	public void remove(Integer bno) throws Exception {
-		dao.delete(bno);
+		boarddao.delete(bno);
 	}
 
 	@Override
 	public List<BoardVO> listAll() throws Exception {
-		return dao.listAll();
+		return boarddao.listAll();
 	}
 
 	@Override
 	public List<BoardVO> listCriteria(Criteria cri) throws Exception {
-		return dao.listCriteria(cri);
+		return boarddao.listCriteria(cri);
 	}
 
 	@Override
 	public int listCountCriteria(Criteria cri) throws Exception {
-		return dao.countPaging(cri);
+		return boarddao.countPaging(cri);
 	}
 
 	@Override
 	public List<BoardVO> listSearchCriteria(SearchCriteria cri) throws Exception {
-		return dao.listSearch(cri);
+		return boarddao.listSearch(cri);
 	}
 
 	@Override
 	public int listSearchCount(SearchCriteria cri) throws Exception {
-		return dao.listSearchCount(cri);
+		return boarddao.listSearchCount(cri);
 	}
 
 }

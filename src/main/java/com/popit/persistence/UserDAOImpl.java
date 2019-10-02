@@ -17,8 +17,8 @@ public class UserDAOImpl implements UserDAO {
 	private static String namespace = "com.popit.mapper.UserMapper";
 	
 	@Override
-	public void insertUser(UserVO vo) throws Exception {
-		session.insert(namespace+ ".insertUser", vo);
+	public void insertUser(UserVO uservo) throws Exception {
+		session.insert(namespace+ ".insertUser", uservo);
 	}
 
 	@Override

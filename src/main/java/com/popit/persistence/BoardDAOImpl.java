@@ -20,8 +20,8 @@ public class BoardDAOImpl implements BoardDAO {
 	private static String namespace = "com.popit.mapper.BoardMapper";
 	
 	@Override
-	public void create(BoardVO vo) throws Exception {
-		session.insert(namespace+".create", vo);
+	public void create(BoardVO boardvo) throws Exception {
+		session.insert(namespace+".create", boardvo);
 	}
 
 	@Override
@@ -30,8 +30,8 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 
 	@Override
-	public void update(BoardVO vo) throws Exception {
-		session.update(namespace+".update", vo);
+	public void update(BoardVO boaradvo) throws Exception {
+		session.update(namespace+".update", boaradvo);
 	}
 	
 	@Override

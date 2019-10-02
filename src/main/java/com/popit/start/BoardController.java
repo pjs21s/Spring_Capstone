@@ -28,12 +28,12 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/regist", method = RequestMethod.GET)
-	  public void registerGET(BoardVO board, Model model) throws Exception {
+	  public void registerGET(BoardVO boardvo, Model model) throws Exception {
 	}
 
 	@RequestMapping(value = "/regist", method = RequestMethod.POST)
-	  public String registPOST(BoardVO board, RedirectAttributes rttr) throws Exception { // 인자값으로 REDIRECT 사용 
-		service.regist(board); // 글작성 서비스 호출
+	  public String registPOST(BoardVO boardvo, RedirectAttributes rttr) throws Exception { // 인자값으로 REDIRECT 사용 
+		service.regist(boardvo); // 글작성 서비스 호출
 	    return "redirect:/list"; 
 	}
 
@@ -49,8 +49,8 @@ public class BoardController {
 	  }
 
 	  @RequestMapping(value = "/modify", method = RequestMethod.POST)
-	  public String modifyPOST(BoardVO board, RedirectAttributes rttr) throws Exception {
-	    service.modify(board); // 글수정 서비스 호출
+	  public String modifyPOST(BoardVO boardvo, RedirectAttributes rttr) throws Exception {
+	    service.modify(boardvo); // 글수정 서비스 호출
 	    return "redirect:/list";
 	  }
 

@@ -20,16 +20,16 @@ public class UserController {
 	private UserService service;
 	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public void RegisterGET(UserVO user, Model model) throws Exception {
+	public void RegisterGET(UserVO uservo, Model model) throws Exception {
 		
 	}
 	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String RegisterPost(UserVO user, RedirectAttributes rttr) throws Exception{
+	public String RegisterPost(UserVO uservo, RedirectAttributes rttr) throws Exception{
 		
-		String hashedPw = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
-		user.setPassword(hashedPw);
-		service.insertUser(user);
+		String hashedPw = BCrypt.hashpw(uservo.getPassword(), BCrypt.gensalt());
+		uservo.setPassword(hashedPw);
+		service.insertUser(uservo);
 		rttr.addFlashAttribute("msg", "Registered");
 	
 		return "redirect:/user/login";

@@ -41,7 +41,6 @@
 			</div>
 		</div>
 	</div>
-
 	<script>
 		var msg = "${msg}";
 		if (msg === "Registered") {

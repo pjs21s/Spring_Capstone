@@ -4,7 +4,7 @@ import com.popit.domain.LoginDTO;
 import com.popit.domain.UserVO;
 
 public interface UserDAO {
-	public void insertUser(UserVO vo) throws Exception;
+	public void insertUser(UserVO uservo) throws Exception;
 	
 	public UserVO login(LoginDTO loginDTO) throws Exception;
 }
