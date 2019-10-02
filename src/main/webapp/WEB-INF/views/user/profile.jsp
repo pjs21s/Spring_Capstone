@@ -11,7 +11,7 @@
     	 <div class="well profile">
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
-                    <h2>김철수</h2> <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+                    <h2>${login.email}</h2><button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
                     <p><strong>직업:</strong>임상심리전문가, 고려대학교 심리학과 교수</p>
                     <p><strong>취득자격:</strong>상담심리사 1급</p>
                     <p><strong>전공:</strong>

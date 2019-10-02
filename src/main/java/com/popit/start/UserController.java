@@ -17,7 +17,7 @@ import com.popit.service.UserService;
 public class UserController {
 	
 	@Inject
-	private UserService service;
+	private UserService userservice;
 	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public void RegisterGET(UserVO uservo, Model model) throws Exception {
@@ -29,7 +29,7 @@ public class UserController {
 		
 		String hashedPw = BCrypt.hashpw(uservo.getPassword(), BCrypt.gensalt());
 		uservo.setPassword(hashedPw);
-		service.insertUser(uservo);
+		userservice.insertUser(uservo);
 		rttr.addFlashAttribute("msg", "Registered");
 	
 		return "redirect:/user/login";

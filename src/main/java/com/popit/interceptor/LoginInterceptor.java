@@ -11,27 +11,27 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 	
 	private static final String LOGIN = "login";
-	
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception{
-		HttpSession httpSession = request.getSession();
+		HttpSession httpsession = request.getSession();
 		ModelMap modelMap = modelAndView.getModelMap();
-		Object userVO = modelMap.get("user");
+		Object userVO = modelMap.get("userVO");
 		
 		if(userVO != null) {
 			System.out.println("Success");
-			httpSession.setAttribute(LOGIN, userVO);
-			response.sendRedirect("/");
+			httpsession.setAttribute(LOGIN, userVO);
+			Object dest = httpsession.getAttribute("dest");
+			response.sendRedirect(dest!=null?(String)dest:"/");
 		}
 	}
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		
-		HttpSession httpSession = request.getSession();
+		HttpSession httpsession = request.getSession();
 		
-		if(httpSession.getAttribute(LOGIN) !=null) {
-			httpSession.removeAttribute(LOGIN);
+		if(httpsession.getAttribute(LOGIN) !=null) {
+			httpsession.removeAttribute(LOGIN);
 		}
 		return true;
 	}

@@ -2,6 +2,7 @@
 <%
 request.setCharacterEncoding("UTF-8");
 %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,18 +31,20 @@ request.setCharacterEncoding("UTF-8");
       </li>
       <li class="nav-item">
         <a class="nav-link" href="centerlist">상담센터 보기</a>
-
+		<c:if test="${empty login}">
       	<li class="nav-item">
         	<a class="nav-link" href="/user/register">회원가입</a>
       	</li>
       	<li class="nav-item">
         	<a class="nav-link" href="/user/login">로그인</a>
-      	</li>      
-
+      	</li>    
+      	</c:if>  
+		<c:if test="${not empty login}">
       	<li class="nav-item">
        	<a class="nav-link" href="#">로그아웃</a>
       	</li>
-      	
+      	<li>${login.email}</li>
+      	</c:if>
       	<li class="nav-item">
        	<a class="nav-link" href="/user/profile">프로필</a>
       	</li>
