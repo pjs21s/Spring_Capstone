@@ -1,6 +1,8 @@
 package com.popit.start;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.mindrot.jbcrypt.BCrypt;
@@ -37,5 +39,15 @@ public class UserLoginController {
 			return;
 		}
 		model.addAttribute("userVO", uservo);
+	}
+	@RequestMapping(value="/logout", method=RequestMethod.GET)
+	public String logout(HttpServletRequest request, HttpServletResponse response, HttpSession httpsession) throws Exception{
+		Object object = httpsession.getAttribute("login");
+		if(object != null) {
+			UserVO uservo = (UserVO) object;
+			httpsession.removeAttribute("login");
+			httpsession.invalidate();
+		}
+		return "/user/logout";
 	}
 }

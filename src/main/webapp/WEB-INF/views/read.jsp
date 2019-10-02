@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/HTML;charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page session="false"%>
 <%@ include file="/WEB-INF/views/header.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -33,11 +32,12 @@
 				<hr>
 				<!-- Post Content -->
 				<p class="lead" name=content readonly="readonly">${boardVO.content}</p>
-				
+				<c:if test="${login.email == boardVO.writer}">
 					<button type="submit" class="btn btn-warning" formaction="modify"
 						formmethod="get">수정</button>
 					<button type="submit" class="btn btn-danger" formaction="remove"
 						formmethod="post">삭제</button>
+				</c:if>	
 					<button type="submit" class="btn btn-primary" formaction="list"
 						formmethod="get">목록</button>
 				</div>

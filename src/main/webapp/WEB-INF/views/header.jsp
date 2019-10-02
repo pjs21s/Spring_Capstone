@@ -41,7 +41,7 @@ request.setCharacterEncoding("UTF-8");
       	</c:if>  
 		<c:if test="${not empty login}">
       	<li class="nav-item">
-       	<a class="nav-link" href="#">로그아웃</a>
+       	<a class="nav-link" href="/user/logout">로그아웃</a>
       	</li>
       	<li>${login.email}</li>
       	</c:if>

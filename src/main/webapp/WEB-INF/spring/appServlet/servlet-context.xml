@@ -45,6 +45,7 @@
 			<mvc:mapping path="/regist"/>
 			<mvc:mapping path="/modify"/>
 			<mvc:mapping path="/remove"/>
+			<mvc:mapping path="/user/profile"/>
 			<beans:ref bean="authInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
