@@ -3,11 +3,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page session="false"%>
-<%@ include file="/WEB-INF/views/home.jsp"%>
+<%@ include file="/WEB-INF/views/header.jsp"%>
 <!DOCTYPE html>
 <html>
 <body>
 	<div class="container-fluid gedf-wrapper">
+		<p>시간순으로 보기, 많이 읽은 순으로 보기, 좋아요 순으로 보기</p>
 		<c:forEach items="${list}" var="boardVO">
 			<!--- \\\\\\\Post-->
 			<div class="card gedf-card">
@@ -82,16 +83,7 @@
 			</c:if>
 		</ul>
 	</nav>
-	<button id="newBtn" type="submit" class="btn btn-primary">글쓰기</button>
 	</div>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#newBtn').on("click", function(evt) {
-				self.location = "regist";
-			});
-		});
-	</script>
 </body>
 </html>
 

@@ -35,6 +35,10 @@ public class UserController {
 		return "redirect:/user/login";
 	}
 	
+	@RequestMapping(value = "/profile", method = RequestMethod.GET)
+	public void ProfileGET() throws Exception {
+		
+	}
 	
 	
 	

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/HTML;charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page session="false"%>
-<%@ include file="/WEB-INF/views/home.jsp"%>
+<%@ include file="/WEB-INF/views/header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +12,9 @@
 	<div class="container">
 		<div class="row">
 			<!-- Post Content Column -->
-			<div class="col-lg-8">
+			<form>
+			<div class="col-lg-8 form-group">
+				<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" style="display:none;"></p>
 				<!-- Title -->
 				<h1 class="mt-4">${boardVO.title}</h1>
 				<!-- Author -->
@@ -31,15 +33,19 @@
 				<hr>
 				<!-- Post Content -->
 				<p class="lead" name=content readonly="readonly">${boardVO.content}</p>
-				<form>
+				
 					<button type="submit" class="btn btn-warning" formaction="modify"
 						formmethod="get">수정</button>
 					<button type="submit" class="btn btn-danger" formaction="remove"
 						formmethod="post">삭제</button>
 					<button type="submit" class="btn btn-primary" formaction="list"
 						formmethod="get">목록</button>
+				</div>
 				</form>
+				<div>
 				<p>태그</p>
+				<span class="badge badge-primary">우울증</span>
+				</div>	
 				<!-- Comments Form -->
 				<div class="card my-4">
 					<h5 class="card-header">답변하기</h5>
@@ -54,6 +60,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
+
 </body>
 </html>

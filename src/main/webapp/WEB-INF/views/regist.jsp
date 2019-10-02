@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/HTML;charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ include file="/WEB-INF/views/home.jsp" %>
+<%@ include file="/WEB-INF/views/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <title>글쓰기</title>
-<!-- CKEditor -->
-<script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
 </head>
 <body>
 <form method="post">
