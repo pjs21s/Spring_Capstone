@@ -44,7 +44,6 @@ public class UserLoginController {
 	public String logout(HttpServletRequest request, HttpServletResponse response, HttpSession httpsession) throws Exception{
 		Object object = httpsession.getAttribute("login");
 		if(object != null) {
-			UserVO uservo = (UserVO) object;
 			httpsession.removeAttribute("login");
 			httpsession.invalidate();
 		}

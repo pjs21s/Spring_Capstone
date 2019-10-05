@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/HTML;charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/HTML;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/views/header.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -17,19 +16,14 @@
 				<!-- Title -->
 				<h1 class="mt-4">${boardVO.title}</h1>
 				<!-- Author -->
-				<p class="lead">
-					by <a href="#">${boardVO.writer}</a>
-				</p>
-				<hr>
+				<p class="lead">by <a href="#">${boardVO.writer}</a></p>
 				<!-- Date/Time -->
 				<p class="text-primary">
 					<fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}" />
 				</p>
-				<hr>
 				<!-- Preview Image -->
 				<img class="img-fluid rounded" src="http://placehold.it/900x300"
 					alt="">
-				<hr>
 				<!-- Post Content -->
 				<p class="lead" name=content readonly="readonly">${boardVO.content}</p>
 				<c:if test="${login.email == boardVO.writer}">
@@ -48,8 +42,8 @@
 				</div>	
 				<!-- Comments Form -->
 				<div class="card my-4">
-					<h5 class="card-header">답변하기</h5>
-					<div class="card-body">
+					<h5 class="card-header border-0">답변하기</h5>
+					<div class="card-body border-0">
 						<form>
 							<div class="form-group">
 								<textarea class="form-control" rows="3"></textarea>

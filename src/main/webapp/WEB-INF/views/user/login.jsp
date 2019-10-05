@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/HTML;charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/HTML;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/views/header.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -11,7 +10,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-8">
 				<div class="card">
-					<div class="card-header">로그인</div>
+					<div class="card-header border-0" style="font-weight:bold;">로그인</div>
 					<div class="card-body">
 						<form action="${path}/user/loginPost" method="post">
 							<div class="form-group row">

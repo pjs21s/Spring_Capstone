@@ -1,18 +1,15 @@
-<%@ page language="java" contentType="text/HTML;charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/HTML;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ page session="false"%>
 <%@ include file="/WEB-INF/views/header.jsp"%>
 <!DOCTYPE html>
 <html>
 <body>
 	<div class="container-fluid gedf-wrapper">
-		<p>시간순으로 보기, 많이 읽은 순으로 보기, 좋아요 순으로 보기</p>
+		<div><i class="fas fa-check"></i> 시간순으로 보기 <i class="fas fa-check"></i> 많이 읽은 순으로 보기 <i class="fas fa-check"></i> 좋아요 순으로 보기</div>
 		<c:forEach items="${list}" var="boardVO">
 			<!--- \\\\\\\Post-->
-			<div class="card gedf-card">
-				<div class="card-header">
+			<div class="card gedf-card border-0">
+				<div class="card-header border-0">
 					<div class="d-flex justify-content-between align-items-center">
 						<div class="d-flex justify-content-between align-items-center">
 							<div class="ml-2">
@@ -37,24 +34,24 @@
 					</div>
 
 				</div>
-				<div class="card-body">
+				<div class="card-body border-0">
 					<div class="text-muted h7 mb-2">
-						<p class="text-primary"><fmt:formatDate pattern="yyyy-MM-dd" value="${boardVO.regdate}"/></p>
+						<p class="text"><fmt:formatDate pattern="yyyy-MM-dd" value="${boardVO.regdate}"/></p>
 					</div>
 					<a class="card-link" href='/read${pageMaker.makeSearch(pageMaker.cri.page) }&bno=${boardVO.bno}'>
-						<h5 class="card-title">${boardVO.title}</h5>
+						<h5 class="card-title" style="font-weight:bold;">${boardVO.title}</h5>
 					</a>
 
 					<p class="card-text">${boardVO.content}</p>
 				</div>
-				<div class="card-footer">
-					<a href="#" class="card-link"><i class="fa fa-gittip"></i>좋아요</a>
-					<a href="#" class="card-link"><i class="fa fa-comment"></i>
-						답변</a> <a href="#" class="card-link"><i
-						class="fa fa-mail-forward"></i>공유</a>
+				<div class="card-footer border-0">
+					<a href="#" class="card-link"><i class="fas fa-heart"></i></a>
+					<a href="#" class="card-link"><i class="fa fa-comment"></i></a>
+					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i></a>
 				</div>
 			</div>
 			<!-- Post /////-->
+			<br>
 		</c:forEach>
 
 	</div>
@@ -84,6 +81,51 @@
 		</ul>
 	</nav>
 	</div>
+	<div class="container-fluid gedf-wrapper">
+	<form class="form-inline my-2 my-lg-0">
+    	<select class="browser-default custom-select" name="searchType">
+		<option value="n"
+			<c:out value="${cri.searchType == null?'selected':''}"/>>
+			---</option>
+		<option value="t"
+			<c:out value="${cri.searchType eq 't'?'selected':''}"/>>제목</option>
+		<option value="c"
+			<c:out value="${cri.searchType eq 'c'?'selected':''}"/>>내용</option>
+		<option value="w"
+			<c:out value="${cri.searchType eq 'w'?'selected':''}"/>>작성자</option>
+		<option value="tc"
+			<c:out value="${cri.searchType eq 'tc'?'selected':''}"/>>
+			제목+내용</option>
+		<option value="cw"
+			<c:out value="${cri.searchType eq 'cw'?'selected':''}"/>>
+			내용+작성자</option>
+		<option value="tcw"
+			<c:out value="${cri.searchType eq 'tcw'?'selected':''}"/>>
+			제목+내용+작성자</option>
+		</select>
+		<input class="form-control mr-sm-2" type="search" placeholder="찾으실게 있으신가요?" aria-label="Search"  name='keyword' id="keywordInput" value='${cri.keyword }'>
+		<button class="btn btn-outline-success my-2 my-sm-0 border-0" id="searchBtn" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+    </div>
+<script>
+<script type="text/javascript">
+$(document).ready(
+	function() {
+		$('#searchBtn').on(
+			"click",
+			function(event) {
+				str = "list"
+				+ '${pageMaker.makeQuery(1)}'
+				+ "&searchType="
+				+ $("select option:selected").val()
+				+ "&keyword=" + encodeURIComponent($('#keywordInput').val());
+				console.log(str);
+				self.location = str;
+			});
+	});
+</script>
+</script>
 </body>
+
 </html>
 

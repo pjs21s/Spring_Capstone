@@ -1,7 +1,6 @@
 package com.popit.start;
 
 import javax.inject.Inject;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -49,13 +48,13 @@ public class BoardController {
 	    model.addAttribute(service.read(bno)); // 수정을 위한 글읽기 서비스 호출
 	  }
 
-	  @RequestMapping(value = "/modify", method = RequestMethod.POST)
+	  @RequestMapping(value = "/modify", method = RequestMethod.PUT)
 	  public String modifyPOST(BoardVO boardvo, RedirectAttributes rttr) throws Exception {
 	    service.modify(boardvo); // 글수정 서비스 호출
 	    return "redirect:/list";
 	  }
 
-	  @RequestMapping(value = "/remove", method = RequestMethod.POST)
+	  @RequestMapping(value = "/remove", method = RequestMethod.DELETE)
 	  public String removePOST(@RequestParam("bno") int bno, RedirectAttributes rttr) throws Exception{
 		  service.remove(bno); // 글삭제 서비스 호출
 		  return "redirect:/list";
