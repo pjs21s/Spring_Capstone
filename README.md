@@ -18,6 +18,8 @@ Spring, MyBatis, MySQL, AWS EC2, RDS, Bootstrap etc
 
 # 이슈 정리
 
+[기본 CRUD 코드 정리](https://pjs21s.github.io/springcrud/)
+
 (추가 예정)
 
 # ETC
@@ -25,4 +27,3 @@ Spring, MyBatis, MySQL, AWS EC2, RDS, Bootstrap etc
 정리한 이슈 이외의 정보는 <https://pjs21s.github.io/>에 적어두었습니다.
 
 **감사합니다.**
-
