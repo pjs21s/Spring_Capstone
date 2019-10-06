@@ -7,7 +7,7 @@
 	<div class="container-fluid gedf-wrapper">
 		<div><i class="fas fa-check"></i> 시간순으로 보기 <i class="fas fa-check"></i> 많이 읽은 순으로 보기 <i class="fas fa-check"></i> 좋아요 순으로 보기</div>
 		<c:forEach items="${list}" var="boardVO">
-			<!--- \\\\\\\Post-->
+			<!--Post-->
 			<div class="card gedf-card border-0">
 				<div class="card-header border-0">
 					<div class="d-flex justify-content-between align-items-center">
@@ -50,7 +50,7 @@
 					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i></a>
 				</div>
 			</div>
-			<!-- Post /////-->
+			<!--Post-->
 			<br>
 		</c:forEach>
 

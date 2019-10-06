@@ -3,14 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>글쓰기</title>
 </head>
 <body>
 <form method="post">
-	<!-- Page Content -->
 	<div class="container form-group">
 		<div class="row">
-			<!-- Post Content Column -->
 			<div class="col-lg-8">
 			<input class="form-control" type="text" name ="title" placeholder="제목" required>
 			<input class="form-control" type="text" name ="writer" placeholder="작성자" value="${login.email}" style="display:none;" readonly>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.popit.mapper.ReplyMapper">
+
+<select id="list" resultMap="ReplyResultMap">
+select reply_no, bno, reply_text, reply_writer, reg_date
+from tbl_reply where bno = #{bno}
+order by reply_no
+</select>
+
+<insert id="create">
+insert into tbl_reply(bno, reply_text, reply_writer)
+values(#{bno}, #{replyText}, #{replyWriter})
+</insert>
+
+<delete id="delete">
+delete from tbl_reply where reply_no = #{replyNo}
+</delete>
+
+<resultMap id="ReplyResultMap" type="ReplyVO">
+	<id property="replyNo" column="reply_no"/>
+	<result property="bno" column="bno"/>
+	<result property="replyText" column="reply_text"/>
+	<result property="replyWriter" column="reply_writer"/>
+	<result property="regDate" column="reg_date"/>
+</resultMap>
+
+
+</mapper>

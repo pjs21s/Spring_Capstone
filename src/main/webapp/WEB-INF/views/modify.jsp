@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/HTML;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/views/header.jsp" %>
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
-<title>글수정</title>
 </head>
 <body>
 <form action="modify" method="post">

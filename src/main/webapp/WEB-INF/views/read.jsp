@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>글읽기</title>
 </head>
 <body>
 	<!-- Page Content -->
@@ -12,20 +11,16 @@
 			<!-- Post Content Column -->
 			<form>
 			<div class="col-lg-8 form-group">
-				<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" style="display:none;"></p>
-				<!-- Title -->
+				<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" style="display:none;">
 				<h1 class="mt-4">${boardVO.title}</h1>
-				<!-- Author -->
 				<p class="lead">by <a href="#">${boardVO.writer}</a></p>
-				<!-- Date/Time -->
 				<p class="text-primary">
 					<fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}" />
 				</p>
 				<!-- Preview Image -->
-				<img class="img-fluid rounded" src="http://placehold.it/900x300"
-					alt="">
-				<!-- Post Content -->
-				<p class="lead" name=content readonly="readonly">${boardVO.content}</p>
+				<img class="img-fluid rounded" src="http://placehold.it/900x300"/>
+
+				<p class="lead" name="content" readonly>${boardVO.content}</p>
 				<c:if test="${login.email == boardVO.writer}">
 					<button type="submit" class="btn btn-warning" formaction="modify"
 						formmethod="get">수정</button>
@@ -46,14 +41,16 @@
 					<div class="card-body border-0">
 						<form>
 							<div class="form-group">
-								<textarea class="form-control" rows="3"></textarea>
+								<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" style="display:none;">
+								<input class="form-control" type="text" name ="replyWriter" placeholder="작성자" value="${login.email}" style="display:none;" readonly>
+								<textarea class="form-control" name ="replyText">${ReplyVO.replyText}</textarea>
 							</div>
-							<button type="submit" class="btn btn-primary">답변</button>
+							<button type="submit" class="btn btn-primary" formaction="reply/write"
+						formmethod="post">답변</button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-
 </body>
 </html>
