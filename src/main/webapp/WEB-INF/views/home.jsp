@@ -8,4 +8,5 @@ request.setCharacterEncoding("UTF-8");
 </head>
 <body>
 </body>
+<%@ include file="/WEB-INF/views/footer.jsp" %>
 </html>

@@ -19,4 +19,5 @@
 CKEDITOR.replace('content');
 </script>
 </body>
+<%@ include file="/WEB-INF/views/footer.jsp" %>
 </html>
