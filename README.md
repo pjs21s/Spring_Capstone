@@ -22,7 +22,7 @@ Spring, MyBatis, MySQL, AWS EC2, RDS, Bootstrap etc
 
 # ETC
 
-이슈 정리한 이외의 관련 정보는 <https://pjs21s.github.io/>에 적어두었습니다.
+정리한 이슈 이외의 정보는 <https://pjs21s.github.io/>에 적어두었습니다.
 
 **감사합니다.**
 
