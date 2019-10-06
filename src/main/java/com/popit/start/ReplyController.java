@@ -27,4 +27,6 @@ public class ReplyController {
 		return "redirect:/list";
 				
 	}
+	
+	
 }

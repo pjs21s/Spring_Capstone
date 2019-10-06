@@ -50,6 +50,16 @@
 						</form>
 					</div>
 				</div>
+				<!-- End Comments Form -->
+				<c:forEach items="${repList}" var="repList">
+				<div class="card my-4">
+					<input type="text"value ="${boardVO.bno}" style="display:none;">
+					<input type="text" alue ="${repList.replyNo}" style="display:none;">
+					<p>${repList.replyText}</p>
+					<p>${repList.replyWriter}</p>
+					<fmt:formatDate pattern="yyyy-MM-dd" value="${repList.regDate}" />
+				</div>
+				</c:forEach>
 			</div>
 		</div>
 </body>

@@ -1,5 +1,7 @@
 package com.popit.start;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
@@ -12,8 +14,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.popit.domain.BoardVO;
 import com.popit.domain.PageMaker;
+import com.popit.domain.ReplyVO;
 import com.popit.domain.SearchCriteria;
 import com.popit.service.BoardService;
+import com.popit.service.ReplyService;
 
 @Controller
 @RequestMapping(value = "/")
@@ -21,6 +25,9 @@ public class BoardController {
 
 	@Inject   // 주입(심부름꾼) 명시
 	private BoardService service;
+	
+	@Inject
+	private ReplyService repservice;
 
 	@RequestMapping(value= "/listAll", method = RequestMethod.GET) // 주소 호출 명시 . 호출하려는 주소 와 REST 방식설정 (GET)
 	public void listAll(Model model) throws Exception { // 메소드 인자값은 model 인터페이스(jsp전달 심부름꾼)
@@ -40,7 +47,10 @@ public class BoardController {
 	@RequestMapping(value = "/read", method = RequestMethod.GET)
 	  public void read(@RequestParam("bno") int bno, Model model) throws Exception{
 		  // 인자값은 파라미터 값으로 기본키인 글번호를 기준으로 Model을 사용하여 불러옴
-		model.addAttribute(service.read(bno)); // read 서비스 호출
+		model.addAttribute(service.read(bno));
+		
+		List<ReplyVO> repList = repservice.list(bno);
+		model.addAttribute("repList", repList);
 	  }
 
 	  @RequestMapping(value = "/modify", method = RequestMethod.GET)

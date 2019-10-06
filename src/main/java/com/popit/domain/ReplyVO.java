@@ -33,6 +33,12 @@ public class ReplyVO {
 	public void setReplyWriter(String replyWriter) {
 		this.replyWriter = replyWriter;
 	}
+	public Date getRegDate() {
+		return regDate;
+	}
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
+	}
 	@Override
 	public String toString() {
 		return "ReplyVO [replyNo=" + replyNo + ", bno=" + bno + ", replyText=" + replyText + ", replyWriter="
