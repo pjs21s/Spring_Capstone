@@ -37,8 +37,8 @@ public class ReplyDAOImpl implements ReplyDAO {
 	}
 
 	@Override
-	public void delete(Integer replyno) throws Exception {
-		session.delete(namespace + ".delete", replyno);
+	public void delete(Integer replyNo) throws Exception {
+		session.delete(namespace + ".delete", replyNo);
 	}
 
 }

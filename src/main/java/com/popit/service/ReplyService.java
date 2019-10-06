@@ -12,6 +12,6 @@ public interface ReplyService {
 	
 	void update(ReplyVO replyvo) throws Exception;
 	
-	void delete(Integer replyno) throws Exception;
+	void delete(Integer replyNo) throws Exception;
 
 }

@@ -10,27 +10,27 @@
 		<div class="row">
 			<!-- Post Content Column -->
 			<form>
-			<div class="col-lg-8 form-group">
-				<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" style="display:none;">
-				<h1 class="mt-4">${boardVO.title}</h1>
-				<p class="lead">by <a href="#">${boardVO.writer}</a></p>
-				<p class="text-primary">
+				<div class="col-lg-8 form-group">
+					<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" style="display:none;">
+					<h1 class="mt-4">${boardVO.title}</h1>
+					<p class="lead">by <a href="#">${boardVO.writer}</a></p>
+					<p class="text-primary">
 					<fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}" />
-				</p>
-				<!-- Preview Image -->
-				<img class="img-fluid rounded" src="http://placehold.it/900x300"/>
+					</p>
+					<!-- Preview Image -->
+					<img class="img-fluid rounded" src="http://placehold.it/900x300"/>
 
-				<p class="lead" name="content" readonly>${boardVO.content}</p>
-				<c:if test="${login.email == boardVO.writer}">
-					<button type="submit" class="btn btn-warning" formaction="modify"
-						formmethod="get">수정</button>
-					<button type="submit" class="btn btn-danger" formaction="remove"
-						formmethod="post">삭제</button>
-				</c:if>	
-					<button type="submit" class="btn btn-primary" formaction="list"
-						formmethod="get">목록</button>
+					<p class="lead" name="content" readonly>${boardVO.content}</p>
+					<c:if test="${login.email == boardVO.writer}">
+						<button type="submit" class="btn btn-warning" formaction="modify"
+							formmethod="get">수정</button>
+						<button type="submit" class="btn btn-danger" formaction="remove"
+							formmethod="post">삭제</button>
+					</c:if>	
+						<button type="submit" class="btn btn-primary" formaction="list"
+							formmethod="get">목록</button>
 				</div>
-				</form>
+			</form>
 				<div>
 				<p>태그</p>
 				<span class="badge badge-primary">우울증</span>
@@ -52,14 +52,20 @@
 				</div>
 				<!-- End Comments Form -->
 				<c:forEach items="${repList}" var="repList">
+				<form>
 				<div class="card my-4">
-					<input type="text"value ="${boardVO.bno}" style="display:none;">
-					<input type="text" alue ="${repList.replyNo}" style="display:none;">
+					<input type="text" value ="${boardVO.bno}" style="display:none;">
+					<input type="text" name="replyNo" value ="${repList.replyNo}" style="display:none;">
 					<p>${repList.replyText}</p>
 					<p>${repList.replyWriter}</p>
 					<fmt:formatDate pattern="yyyy-MM-dd" value="${repList.regDate}" />
 				</div>
+				
+				<button type="submit" class="btn btn-danger" formaction="reply/delete"
+						formmethod="post">삭제</button>
+				</form>
 				</c:forEach>
+				
 			</div>
 		</div>
 </body>
