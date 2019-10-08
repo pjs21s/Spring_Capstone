@@ -18,7 +18,6 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		Object userVO = modelMap.get("userVO");
 		
 		if(userVO != null) {
-			System.out.println("Success");
 			httpsession.setAttribute(LOGIN, userVO);
 			Object dest = httpsession.getAttribute("dest");
 			response.sendRedirect(dest!=null?(String)dest:"/");

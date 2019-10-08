@@ -43,11 +43,6 @@
 
 					<p class="card-text">${boardVO.content}</p>
 				</div>
-				<div class="card-footer border-0">
-					<a href="#" class="card-link"><i class="fas fa-heart"></i></a>
-					<a href="#" class="card-link"><i class="fa fa-comment"></i></a>
-					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i></a>
-				</div>
 			</div>
 			<!--Post-->
 			<br>

@@ -13,6 +13,7 @@
 				<div class="col-lg-8 form-group">
 					<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" style="display:none;">
 					<h1 class="mt-4">${boardVO.title}</h1>
+					<h6 class="mt-4">${boardVO.viewcnt}</h6>
 					<p class="lead">by <a href="#">${boardVO.writer}</a></p>
 					<p class="text-primary">
 					<fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}" />
@@ -35,6 +36,11 @@
 				<p>태그</p>
 				<span class="badge badge-primary">우울증</span>
 				</div>	
+				<div class="card-footer border-0">
+					<a href="#" class="card-link"><i class="fas fa-heart"></i></a>
+					<a href="#" class="card-link"><i class="fa fa-comment"></i></a>
+					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i></a>
+				</div>
 				<!-- Comments Form -->
 				<div class="card my-4">
 					<h5 class="card-header border-0">답변하기</h5>

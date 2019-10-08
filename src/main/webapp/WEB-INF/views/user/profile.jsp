@@ -20,9 +20,7 @@
                     <p><strong>소개글:</strong>렛미인트로듀스마셀프</p>
                 </div>             
                 <div class="col-xs-12 col-sm-4 text-center">
-                    <figure>
-                        <img src="https://web.usask.ca/images/profile.jpg" alt="" class="img-circle img-responsive">
-                    </figure>
+                	<img src="https://web.usask.ca/images/profile.jpg" class="img-circle img-responsive">
                 </div>
             </div>            
             <div class="col-xs-12 divider text-center">
@@ -44,7 +42,8 @@
                       </button>
                       <ul class="dropdown-menu text-left" role="menu">
                         <li><a href="#">이메일 보내기</a></li>
-                        <li><a href="#">회원정보 수정</a></li>
+                        <li><a href="modify">회원정보 수정</a></li>
+                        <li><a href="withdrawal">회원탈퇴</a></li>
                         <li class="divider"></li>
                         <li><a href="#">작성한 글</a></li>
                       </ul>

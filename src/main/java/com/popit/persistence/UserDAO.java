@@ -7,5 +7,10 @@ public interface UserDAO {
 	public void insertUser(UserVO uservo) throws Exception;
 	
 	public UserVO login(LoginDTO loginDTO) throws Exception;
+	
+	public void modify(LoginDTO loginDTO) throws Exception;
+	
+	public void withdrawal(LoginDTO loginDTO) throws Exception;
+	
 }
 

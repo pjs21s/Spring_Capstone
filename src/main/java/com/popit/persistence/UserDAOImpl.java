@@ -26,5 +26,15 @@ public class UserDAOImpl implements UserDAO {
 		return session.selectOne(namespace+".login", loginDTO);
 	}
 
+	@Override
+	public void modify(LoginDTO loginDTO) throws Exception {
+		session.update(namespace+".modify", loginDTO);
+	}
+
+	@Override
+	public void withdrawal(LoginDTO loginDTO) throws Exception {
+		session.delete(namespace+".withdrawal", loginDTO);
+	}
+
 	
 }

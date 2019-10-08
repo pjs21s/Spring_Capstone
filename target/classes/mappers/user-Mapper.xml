@@ -5,6 +5,7 @@
 <resultMap id="userVOResultMap" type="userVO">
 	<id property="email" column="user_email"/>
 	<result property="password" column="user_pw"/>
+	<result property="name" column="user_name"/>
 </resultMap>
 
 <insert id="insertUser">
@@ -15,4 +16,14 @@ values(#{email}, #{password}, #{name})
 <select id="login" resultMap="userVOResultMap">
 select * from USER where user_email = #{email}
 </select>
+
+<update id="modify">
+update USER set user_name = #{name}
+where user_email = #{email}
+</update>
+
+<delete id="withdrawal">
+delete from USER
+where user_email = #{email} and user_pw = #{password}
+</delete>
 </mapper>

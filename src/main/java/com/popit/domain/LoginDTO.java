@@ -3,8 +3,16 @@ package com.popit.domain;
 public class LoginDTO {
 	private String email;
 	private String password;
+	private String name;
 	private boolean useCookie;
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -27,6 +35,7 @@ public class LoginDTO {
 	
 	@Override
 	public String toString() {
-		return "LoginDTO [email=" + email + ", password=" + password + ", useCookie=" + useCookie + "]";
+		return "LoginDTO [email=" + email + ", password=" + password + ", name=" + name + ", useCookie=" + useCookie
+				+ "]";
 	}
 }

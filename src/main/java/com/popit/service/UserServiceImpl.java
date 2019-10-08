@@ -25,4 +25,16 @@ public class UserServiceImpl implements UserService {
 		return userdao.login(loginDTO);
 	}
 
+
+	@Override
+	public void modify(LoginDTO loginDTO) throws Exception {
+		userdao.modify(loginDTO);
+	}
+
+
+	@Override
+	public void withdrawal(LoginDTO loginDTO) throws Exception {
+		userdao.withdrawal(loginDTO);
+	}
+
 }
