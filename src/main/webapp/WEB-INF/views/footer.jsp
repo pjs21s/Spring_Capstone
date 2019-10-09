@@ -21,10 +21,10 @@
       <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
         <!-- Links -->
-          <a class="em-ic">
+          <a class="em-ic" href="mailto:jsgd1254@gmail.com">
             <i class="far fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a>
-          <a class="git-ic">
+          <a class="git-ic" href="https://github.com/pjs21s/Spring_Capstone">
             <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a>
       </div>
@@ -34,7 +34,7 @@
   </div>
   <!-- Footer Links -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="#"> touchandtouch.net</a>
+    touchandtouch.net
   </div>
 </footer>
 <!-- Footer -->

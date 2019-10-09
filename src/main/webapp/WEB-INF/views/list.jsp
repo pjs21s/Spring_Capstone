@@ -35,13 +35,13 @@
 				</div>
 				<div class="card-body border-0">
 					<div class="text-muted h7 mb-2">
-						<p class="text"><fmt:formatDate pattern="yyyy-MM-dd" value="${boardVO.regdate}"/></p>
+						<small class="text-muted"><fmt:formatDate pattern="yyyy-MM-dd" value="${boardVO.regdate}"/></small>
 					</div>
 					<a class="card-link" href='/read${pageMaker.makeSearch(pageMaker.cri.page) }&bno=${boardVO.bno}'>
-						<h5 class="card-title" style="font-weight:bold;">${boardVO.title}</h5>
+						<h5 style="font-weight:bold;">${boardVO.title}</h5>
 					</a>
 
-					<p class="card-text">${boardVO.content}</p>
+					<span class="d-inline-block text-truncate">${boardVO.content}</span>
 				</div>
 			</div>
 			<!--Post-->

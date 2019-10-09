@@ -29,7 +29,6 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 		HttpSession httpsession = request.getSession();
 		
 		if(httpsession.getAttribute("login") == null) {
-			System.out.println("not logged");
 			saveDest(request);
 			response.sendRedirect("/user/login");
 			return false;

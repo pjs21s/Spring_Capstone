@@ -49,17 +49,18 @@ font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
         	<a class="nav-link" href="/user/login">로그인</a>
       	</li>    
       	</c:if>  
+      	
 		<c:if test="${not empty login}">
       	<li class="nav-item active">
-       	<a class="nav-link" href="/user/logout">로그아웃</a>
+       		<a class="nav-link" href="/user/logout">로그아웃</a>
       	</li>
       	<li>${login.email}</li>
       	</c:if>
       	<li class="nav-item active">
-       	<a class="nav-link" href="/user/profile">프로필</a>
+       		<a class="nav-link" href="/user/profile">프로필</a>
       	</li>
       	<li class="nav-item">
-       	<a href="/regist" class="btn btn-primary">질문하기</a>
+       		<a href="/regist" class="btn btn-primary">질문하기</a>
       	</li>
     </ul>
     
