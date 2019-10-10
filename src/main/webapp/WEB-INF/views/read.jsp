@@ -21,7 +21,7 @@
 					<!-- Preview Image -->
 					<img class="img-fluid rounded" src="http://placehold.it/900x300"/>
 
-					<p name="content" readonly>${boardVO.content}</p>
+					<p>${boardVO.content}</p>
 					<c:if test="${login.email == boardVO.writer}">
 						<button type="submit" class="btn btn-warning" formaction="modify"
 							formmethod="get">수정</button>
@@ -76,7 +76,7 @@
 								<small class="text-muted"><fmt:formatDate pattern="yyyy-MM-dd" value="${repList.regDate}"/></small>
 								<input type="text" value ="${boardVO.bno}" style="display:none;">
 								<input type="text" name="replyNo" value ="${repList.replyNo}" style="display:none;">
-								<p class="lead" name="content" readonly>${repList.replyText}</p>
+								<p class="lead">${repList.replyText}</p>
 							</div>
 							<c:if test="${login.email == repList.replyWriter}">
 							<button type="submit" class="btn btn-danger" formaction="reply/delete" formmethod="post">삭제</button>

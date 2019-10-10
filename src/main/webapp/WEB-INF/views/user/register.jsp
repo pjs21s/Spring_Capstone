@@ -36,8 +36,8 @@
 							<div class="col-md-6 offset-md-4">
 								<button type="submit" class="btn btn-primary">회원가입</button>
 							</div>
+						</form>
 					</div>
-					</form>
 				</div>
 			</div>
 		</div>

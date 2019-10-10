@@ -34,8 +34,8 @@
 								</button>
 								<a href="#" class="btn btn-link">비밀번호가 기억나지 않으세요?</a>
 							</div>
+						</form>
 					</div>
-					</form>
 				</div>
 			</div>
 		</div>

@@ -37,10 +37,8 @@
 					<div class="text-muted h7 mb-2">
 						<small class="text-muted"><fmt:formatDate pattern="yyyy-MM-dd" value="${boardVO.regdate}"/></small>
 					</div>
-					<a class="card-link" href='/read${pageMaker.makeSearch(pageMaker.cri.page) }&bno=${boardVO.bno}'>
-						<h5 style="font-weight:bold;">${boardVO.title}</h5>
-					</a>
-
+					<a class="card-link" href='/read${pageMaker.makeSearch(pageMaker.cri.page)}&bno=${boardVO.bno}'>
+						<p style="font-weight:bold;">${boardVO.title}</p></a>
 					<span class="d-inline-block text-truncate">${boardVO.content}</span>
 				</div>
 			</div>
@@ -117,7 +115,6 @@ $(document).ready(
 				self.location = str;
 			});
 	});
-</script>
 </script>
 </body>
 <%@ include file="/WEB-INF/views/footer.jsp" %>
