@@ -8,7 +8,6 @@ import javax.servlet.http.HttpSession;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -17,7 +16,7 @@ import com.popit.domain.UserVO;
 import com.popit.service.UserService;
 
 @Controller
-@RequestMapping("/user/*")
+@RequestMapping("/user")
 public class UserLoginController {
 	
 	private final UserService userService;
@@ -28,7 +27,7 @@ public class UserLoginController {
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
-	public void LoginGET(@ModelAttribute("loginDTO") LoginDTO loginDTO) {
+	public void LoginGET(LoginDTO loginDTO) {
 	}
 	
 	@RequestMapping(value="/loginPost", method=RequestMethod.POST)

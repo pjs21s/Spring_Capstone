@@ -2,10 +2,14 @@ package com.popit.start;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -15,19 +19,23 @@ import com.popit.domain.UserVO;
 import com.popit.service.UserService;
 
 @Controller
-@RequestMapping("/user/*")
+@RequestMapping("/user")
 public class UserController {
 	
 	@Inject
 	private UserService userservice;
 	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public void RegisterGET(UserVO uservo, Model model) throws Exception {
-		
+	public void RegisterGET(@ModelAttribute UserVO uservo, Model model) throws Exception {
 	}
 	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String RegisterPost(UserVO uservo, RedirectAttributes rttr) throws Exception{
+	public String RegisterPost(@Valid UserVO uservo, BindingResult result, RedirectAttributes rttr) throws Exception{
+		
+		if(result.hasErrors()) {
+			System.out.println("has errors");
+			return "/user/register";
+		}
 		
 		String hashedPw = BCrypt.hashpw(uservo.getPassword(), BCrypt.gensalt());
 		uservo.setPassword(hashedPw);

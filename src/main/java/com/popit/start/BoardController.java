@@ -29,10 +29,6 @@ public class BoardController {
 	@Inject
 	private ReplyService repservice;
 
-	@RequestMapping(value= "/listAll", method = RequestMethod.GET) // 주소 호출 명시 . 호출하려는 주소 와 REST 방식설정 (GET)
-	public void listAll(Model model) throws Exception { // 메소드 인자값은 model 인터페이스(jsp전달 심부름꾼)
-		model.addAttribute("list",service.listAll());
-	}
 
 	@RequestMapping(value = "/regist", method = RequestMethod.GET)
 	  public void registerGET(BoardVO boardvo, Model model) throws Exception {

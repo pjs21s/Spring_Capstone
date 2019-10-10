@@ -1,8 +1,20 @@
 package com.popit.domain;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Length;
+
 public class UserVO {
+	
+	@NotNull
+	@Email
 	private String email;
+	
+	@NotNull
+	@Length(min=3)
 	private String name;
+	
+	@NotNull
 	private String password;
 	
 	public String getEmail() {
