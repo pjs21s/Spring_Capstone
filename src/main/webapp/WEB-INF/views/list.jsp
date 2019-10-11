@@ -39,7 +39,7 @@
 					</div>
 					<a class="card-link" href='/read${pageMaker.makeSearch(pageMaker.cri.page)}&bno=${boardVO.bno}'>
 						<p style="font-weight:bold;">${boardVO.title}</p></a>
-					<span class="d-inline-block text-truncate">${boardVO.content}</span>
+					<span style="display: block; overflow: hidden;">${boardVO.content}</span>
 				</div>
 			</div>
 			<!--Post-->

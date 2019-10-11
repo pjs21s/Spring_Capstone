@@ -55,10 +55,10 @@ font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
        		<a class="nav-link" href="/user/logout">로그아웃</a>
       	</li>
       	<li>${login.email}</li>
-      	</c:if>
       	<li class="nav-item active">
        		<a class="nav-link" href="/user/profile">프로필</a>
       	</li>
+      	</c:if>
       	<li class="nav-item">
        		<a href="/regist" class="btn btn-primary">질문하기</a>
       	</li>

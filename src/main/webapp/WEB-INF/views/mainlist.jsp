@@ -18,7 +18,7 @@
                 <ul>
                 	<c:forEach items="${mainList}" var="boardVO">
                 	<li class="bg-white rounded ml-3 p-4 shadow">
-                        <a class="card-link" href='/read${pageMaker.makeSearch(pageMaker.cri.page)}&bno=${boardVO.bno}'>
+                        <a class="card-link" value="${boardVO.bno}" style="display=none;">
                         <h2 class="h5 mb-0">${boardVO.title}</h2></a>
                         <h6 class="mt-4">조회 ${boardVO.viewcnt}</h6>
 						<span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>${boardVO.regdate}</span>
@@ -29,5 +29,6 @@
             </div>
         </div>
 </div>
+
 </body>
 </html>
