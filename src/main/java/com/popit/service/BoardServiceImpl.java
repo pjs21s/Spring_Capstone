@@ -63,4 +63,9 @@ public class BoardServiceImpl implements BoardService {
 		return boarddao.listSearchCount(cri);
 	}
 
+	@Override
+	public List<BoardVO> mainList() throws Exception {
+		return boarddao.mainList();
+	}
+
 }

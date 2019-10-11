@@ -7,6 +7,7 @@ request.setCharacterEncoding("UTF-8");
 <head>
 </head>
 <body>
+<%@ include file="/WEB-INF/views/mainlist.jsp" %>
 </body>
 <%@ include file="/WEB-INF/views/footer.jsp" %>
 </html>

@@ -79,5 +79,10 @@ public class BoardDAOImpl implements BoardDAO {
 		return session.selectOne(namespace + ".listSearchCount", cri);
 	}
 
+	@Override
+	public List<BoardVO> mainList() throws Exception {
+		return session.selectList(namespace + ".mainList");
+	}
+
 	
 }

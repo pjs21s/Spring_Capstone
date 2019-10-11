@@ -79,5 +79,4 @@ public class BoardController {
 	  public void centerListGET() throws Exception {
 	}
 
-
 }
