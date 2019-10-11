@@ -15,6 +15,7 @@ public class UserVO {
 	private String name;
 	
 	@NotNull
+	@Length(min=6)
 	private String password;
 	
 	public String getEmail() {

@@ -23,7 +23,7 @@ public class ReplyDAOImpl implements ReplyDAO {
 
 	@Override
 	public List<ReplyVO> list(Integer bno) throws Exception {
-		return session.selectList(namespace +".list", bno);
+		return session.selectList(namespace + ".list", bno);
 	}
 
 	@Override

@@ -21,7 +21,7 @@ public class BoardDAOImpl implements BoardDAO {
 	
 	@Override
 	public void create(BoardVO boardvo) throws Exception {
-		session.insert(namespace+".create", boardvo);
+		session.insert(namespace + ".create", boardvo);
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public void update(BoardVO boaradvo) throws Exception {
-		session.update(namespace+".update", boaradvo);
+		session.update(namespace + ".update", boaradvo);
 	}
 	
 	@Override
@@ -41,7 +41,7 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public void delete(Integer bno) throws Exception {
-		session.delete(namespace+".delete", bno);
+		session.delete(namespace + ".delete", bno);
 	}
 
 	@Override
@@ -56,12 +56,12 @@ public class BoardDAOImpl implements BoardDAO {
 		}
 		page = (page - 1) * 10;
 		
-		return session.selectList(namespace+".listPage", page);
+		return session.selectList(namespace + ".listPage", page);
 	}
 
 	@Override
 	public List<BoardVO> listCriteria(Criteria cri) throws Exception {
-		return session.selectList(namespace+".listCriteria", cri);
+		return session.selectList(namespace + ".listCriteria", cri);
 	}
 
 	@Override
@@ -71,12 +71,12 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public List<BoardVO> listSearch(SearchCriteria cri) throws Exception {
-		return session.selectList(namespace+".listSearch", cri);
+		return session.selectList(namespace + ".listSearch", cri);
 	}
 
 	@Override
 	public int listSearchCount(SearchCriteria cri) throws Exception {
-		return session.selectOne(namespace+".listSearchCount", cri);
+		return session.selectOne(namespace + ".listSearchCount", cri);
 	}
 
 	

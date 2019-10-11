@@ -32,7 +32,7 @@
 							<div class="col-md-6 offset-md-4">
 								<button type="submit" class="btn btn-primary">로그인
 								</button>
-								<a href="#" class="btn btn-link">비밀번호가 기억나지 않으세요?</a>
+								<!-- <a href="#" class="btn btn-link">비밀번호가 기억나지 않으세요?</a> -->
 							</div>
 						</form>
 					</div>

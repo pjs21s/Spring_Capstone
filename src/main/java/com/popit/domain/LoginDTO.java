@@ -1,9 +1,11 @@
 package com.popit.domain;
 
 public class LoginDTO {
+	
 	private String email;
 	private String password;
 	private String name;
+	
 	private boolean useCookie;
 	
 	public String getName() {

@@ -18,22 +18,22 @@ public class UserDAOImpl implements UserDAO {
 	
 	@Override
 	public void insertUser(UserVO uservo) throws Exception {
-		session.insert(namespace+ ".insertUser", uservo);
+		session.insert(namespace + ".insertUser", uservo);
 	}
 
 	@Override
 	public UserVO login(LoginDTO loginDTO) throws Exception {
-		return session.selectOne(namespace+".login", loginDTO);
+		return session.selectOne(namespace + ".login", loginDTO);
 	}
 
 	@Override
 	public void modify(LoginDTO loginDTO) throws Exception {
-		session.update(namespace+".modify", loginDTO);
+		session.update(namespace + ".modify", loginDTO);
 	}
 
 	@Override
 	public void withdrawal(LoginDTO loginDTO) throws Exception {
-		session.delete(namespace+".withdrawal", loginDTO);
+		session.delete(namespace + ".withdrawal", loginDTO);
 	}
 
 	

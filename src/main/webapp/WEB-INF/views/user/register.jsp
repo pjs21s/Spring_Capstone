@@ -14,23 +14,21 @@
 						<form:form modelAttribute="userVO" method="post">
 							<div class="form-group row">
 								<div class="col-md-6 offset-md-4">
-									<form:input path="email" class="form-control"/>
+									<form:input path="email" class="form-control" name="email" placeholder="이메일"/>
 									<form:errors path="email"/>
 								</div>
 							</div>
 
 							<div class="form-group row">
 								<div class="col-md-6 offset-md-4">
-									<form:input path="password" type="password" id="password" class="form-control"
-										name="password" placeholder="비밀번호"/>
+									<form:input path="password" type="password" id="password" class="form-control" name="password" placeholder="비밀번호"/>
 									<form:errors path="password"/>
 								</div>
 							</div>
 							
 							<div class="form-group row">
 								<div class="col-md-6 offset-md-4">
-									<form:input path="name" type="text" id="name" class="form-control"
-										name="name" placeholder="이름"/>
+									<form:input path="name" type="text" id="name" class="form-control" name="name" placeholder="이름"/>
 									<form:errors path="name"/>
 								</div>
 							</div>

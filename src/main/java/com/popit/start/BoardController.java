@@ -23,7 +23,7 @@ import com.popit.service.ReplyService;
 @RequestMapping(value = "/")
 public class BoardController {	
 
-	@Inject   // 주입(심부름꾼) 명시
+	@Inject
 	private BoardService service;
 	
 	@Inject

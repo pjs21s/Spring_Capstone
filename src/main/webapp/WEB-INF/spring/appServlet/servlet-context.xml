@@ -68,6 +68,5 @@
 				<beans:value>messages/messages_ko</beans:value>
 			</beans:list>
 		</beans:property>
-
 	</beans:bean>
 </beans:beans>

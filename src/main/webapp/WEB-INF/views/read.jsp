@@ -11,7 +11,7 @@
 			<!-- Post Content Column -->
 			<form>
 				<div class="col-lg-8 form-group">
-					<input class="form-control" type="text" name ="bno" value ="${boardVO.bno}" style="display:none;">
+					<input class="form-control" type="text" name ="bno" value="${boardVO.bno}" style="display:none;">
 					<h1 class="mt-4">${boardVO.title}</h1>
 					<h6 class="mt-4">조회 ${boardVO.viewcnt}</h6>
 					<p class="lead">by <a href="#">${boardVO.writer}</a></p>
@@ -33,16 +33,10 @@
 							
 					<div class="border-0">
 					<a href="#" class="card-link"><i class="fas fa-heart"></i></a>
-					<a href="#" class="card-link"><i class="fa fa-comment"></i></a>
 					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i></a>
 					</div>	
 				</div>
 			</form>
-			
-			<div>
-				<p>태그</p>
-				<span class="badge badge-primary">우울증</span>
-			</div>
 			
 		</div>
 			<!-- Comments Form -->
