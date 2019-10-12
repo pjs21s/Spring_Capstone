@@ -20,6 +20,7 @@ Spring, MyBatis, MySQL, AWS EC2, RDS, Bootstrap etc
 # 이슈 정리
 
 [기본 CRUD 코드 정리](https://pjs21s.github.io/springcrud/)
+[Validator 사용](https://pjs21s.github.io/Spring-Validator/)
 
 (추가 예정)
 
