@@ -9,7 +9,7 @@
     <!-- For demo purpose -->
 	<div class="row text-center mb-5">
         <div class="col-lg-8 mx-auto">
-            <h1 class="display-4">많이 읽은 질문</h1>
+            <h2 class="display-4">많이 읽은 질문</h2>
         </div>
 	</div><!-- End -->
         <div class="row">

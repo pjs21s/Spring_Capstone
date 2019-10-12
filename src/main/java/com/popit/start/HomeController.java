@@ -18,6 +18,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model, RedirectAttributes rttr) throws Exception {
+
 		model.addAttribute("mainList", service.mainList());
 		return "home";
 	}

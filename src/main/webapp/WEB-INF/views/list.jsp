@@ -15,7 +15,7 @@
 								<div class="h5 m-0">${boardVO.writer}</div>
 							</div>
 						</div>
-						<div>
+						<!-- <div>
 							<div class="dropdown">
 								<button class="btn btn-link dropdown-toggle" type="button"
 									id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true"
@@ -29,7 +29,7 @@
 									<a class="dropdown-item" href="#">신고</a>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 
 				</div>

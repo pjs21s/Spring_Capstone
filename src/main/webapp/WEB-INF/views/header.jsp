@@ -38,7 +38,7 @@ font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="list">질문하고 답변하기</a>
+        <a class="nav-link" href="${pageContext.request.contextPath}/list">질문하고 답변하기</a>
       </li>
         <!-- <a class="nav-link" href="centerlist">상담센터 보기</a>  -->
 		<c:if test="${empty login}">
@@ -60,11 +60,12 @@ font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
       	</li>
       	</c:if>
       	<li class="nav-item">
-       		<a href="/regist" class="btn btn-primary">질문하기</a>
+       		<a href="${pageContext.request.contextPath}/regist" class="btn btn-primary">질문하기</a>
       	</li>
     </ul>
   </div>
 </nav>
+
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -16,7 +16,7 @@ import com.popit.domain.UserVO;
 import com.popit.service.UserService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping(value = "/user")
 public class UserLoginController {
 	
 	private final UserService userService;

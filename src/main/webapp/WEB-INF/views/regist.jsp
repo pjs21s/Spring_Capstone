@@ -18,7 +18,7 @@
 		</div>
 	</div>
 </form>
-<script>
+<script type="text/javascript">
 CKEDITOR.replace('content');
 </script>
 </body>

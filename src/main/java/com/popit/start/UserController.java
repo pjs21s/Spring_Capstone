@@ -8,7 +8,6 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,7 +18,7 @@ import com.popit.domain.UserVO;
 import com.popit.service.UserService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping(value = "/user")
 public class UserController {
 	
 	@Inject
@@ -47,12 +46,10 @@ public class UserController {
 	
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
 	public void ProfileGET() throws Exception {
-		
 	}
 	
 	@RequestMapping(value = "/modify", method = RequestMethod.GET)
 	public void ModifyGET() throws Exception {
-		
 	}
 	
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
@@ -65,7 +62,6 @@ public class UserController {
 	
 	@RequestMapping(value = "/withdrawal", method = RequestMethod.GET)
 	public void WithdrawalGET() throws Exception {
-		
 	}
 	
 	@RequestMapping(value = "/withdrawal", method = RequestMethod.POST)

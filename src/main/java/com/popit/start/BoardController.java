@@ -35,8 +35,8 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/regist", method = RequestMethod.POST)
-	  public String registPOST(BoardVO boardvo, RedirectAttributes rttr) throws Exception { // 인자값으로 REDIRECT 사용 
-		service.regist(boardvo); // 글작성 서비스 호출
+	  public String registPOST(BoardVO boardvo, RedirectAttributes rttr) throws Exception {
+		service.regist(boardvo);
 	    return "redirect:/list"; 
 	}
 
@@ -73,6 +73,8 @@ public class BoardController {
 	    pageMaker.setCri(cri);
 	    pageMaker.setTotalCount(service.listSearchCount(cri));//전체목록에 검색페이징 카운트+
 	    model.addAttribute("pageMaker", pageMaker);
+	    
+
 	  }
 	  
 	  @RequestMapping(value = "/centerlist", method = RequestMethod.GET)
