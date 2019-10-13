@@ -18,8 +18,6 @@
 					<p class="text-primary">
 					<small class="text-muted"><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}"/></small>
 					</p>
-					<!-- Preview Image -->
-					<img class="img-fluid rounded" src="http://placehold.it/900x300"/>
 
 					<p>${boardVO.content}</p>
 					<c:if test="${login.email == boardVO.writer}">

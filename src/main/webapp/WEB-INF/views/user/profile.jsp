@@ -11,20 +11,15 @@
     	 <div class="well profile">
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
-                    <h2>${login.email}</h2><button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
-                    <p><strong>직업:</strong>임상심리전문가, 고려대학교 심리학과 교수</p>
-                    <p><strong>취득자격:</strong>상담심리사 1급</p>
+                    <h2>${login.email}</h2>
+                    <!-- <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
                     <p><strong>전공:</strong>
                         <span class="badge badge-primary">Html5</span> 
-                    </p>
-                    <p><strong>소개글:</strong>렛미인트로듀스마셀프</p>
+                    </p> -->
                 </div>             
-                <div class="col-xs-12 col-sm-4 text-center">
-                	<img src="https://web.usask.ca/images/profile.jpg" class="img-circle img-responsive">
-                </div>
             </div>            
             <div class="col-xs-12 divider text-center">
-                <div class="col-xs-12 col-sm-4 emphasis">
+                <!-- <div class="col-xs-12 col-sm-4 emphasis">
                     <h2><strong> 20,7K </strong></h2>                    
                     <p><small>답변현황</small></p>
                     
@@ -32,20 +27,16 @@
                 <div class="col-xs-12 col-sm-4 emphasis">
                     <h2><strong>245</strong></h2>                    
                     <p><small>포인트</small></p>
-                </div>
+                </div> -->
                 <div class="col-xs-12 col-sm-4 emphasis">
                     <div class="btn-group dropup btn-block">
                       <button type="button" class="btn btn-primary"><span class="fa fa-gear"></span>더보기</button>
-                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
                       </button>
-                      <ul class="dropdown-menu text-left" role="menu">
-                        <li><a href="#">이메일 보내기</a></li>
-                        <li><a href="modify">회원정보 수정</a></li>
-                        <li><a href="withdrawal">회원탈퇴</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">작성한 글</a></li>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a class="dropdown-item" href="modify">회원정보 수정</a></li>
+                        <li><a class="dropdown-item" href="withdrawal">회원탈퇴</a></li>
                       </ul>
                     </div>
                 </div>

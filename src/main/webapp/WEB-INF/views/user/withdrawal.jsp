@@ -6,9 +6,16 @@
 </head>
 <body>
 <form method="post">
-<input type="text" name="email" value="${login.email}">
-<input type="text" name="password" value="${login.password}">
-<button type="submit">탈퇴</button>
+	<div class="container form-group">
+		<div class="row">
+			<div class="col-lg-8">
+				<input class="form-control" type="text" name ="email" value="${login.email}" readonly>
+				<input class="form-control" type="text" name ="password" value="${login.password}" readonly>
+				<br>
+				<button type ="submit" class="btn btn-danger">탈퇴</button>
+			</div>
+		</div>
+	</div>
 </form>
 </body>
 </html>

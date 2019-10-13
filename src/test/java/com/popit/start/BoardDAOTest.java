@@ -17,16 +17,27 @@ public class BoardDAOTest {
 
 	@Inject
 	private BoardDAO boardDAO;
+	
+	@Test
+	public void testCreate() throws Exception {
+		for (int i = 1; i<= 10; i++) {
+			BoardVO vo = new BoardVO();
+			vo.setTitle(i+ "번째 제목");
+			vo.setContent(i + "번째 본문");
+			vo.setWriter("writer" + i);
+			boardDAO.create(vo);
+		}
+	}
 
 	@Test
 	public void testRead() throws Exception {
-		boardDAO.read(1).toString();
+		boardDAO.read(20).toString();
 	}
 	
 	@Test
 	public void testUpdate() throws Exception {
 		BoardVO vo = new BoardVO();
-		vo.setBno(1);
+		vo.setBno(20);
 		vo.setTitle("제목");
 		vo.setContent("내용123");
 		boardDAO.update(vo);
@@ -34,6 +45,6 @@ public class BoardDAOTest {
 	
 	@Test
 	public void testDelete() throws Exception {
-		boardDAO.delete(1);
+		boardDAO.delete(29);
 	}
 }
