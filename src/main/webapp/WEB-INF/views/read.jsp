@@ -20,6 +20,7 @@
 					</p>
 
 					<p>${boardVO.content}</p>
+					<div>
 					<c:if test="${login.name == boardVO.writer}">
 						<button type="submit" class="btn btn-warning" formaction="modify"
 							formmethod="get">수정</button>
@@ -28,10 +29,11 @@
 					</c:if>	
 						<button type="submit" class="btn btn-primary" formaction="list"
 							formmethod="get">목록</button>
-							
+					</div>
+					
 					<div class="border-0">
-					<a href="#" class="card-link"><i class="fas fa-heart"></i></a>
-					<a href="#" class="card-link"><i class="fa fa-mail-forward"></i></a>
+					<a class="btn btn-outline-primary border-0" href="#" role="button"><i class="fas fa-heart"></i></a>
+					<a class="btn btn-outline-primary border-0" href="#" role="button"><i class="fa fa-mail-forward"></i></a>
 					</div>	
 				</div>
 			</form>

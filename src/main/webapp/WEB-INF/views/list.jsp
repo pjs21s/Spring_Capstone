@@ -7,13 +7,11 @@
 		<!-- <div><i class="fas fa-check"></i> 시간순으로 보기 <i class="fas fa-check"></i> 많이 읽은 순으로 보기 <i class="fas fa-check"></i> 좋아요 순으로 보기</div> -->
 		<c:forEach items="${list}" var="boardVO">
 			<!--Post-->
-			<div class="card gedf-card border-0">
+			<div class="card shadow-sm rounded border-0">
 				<div class="card-header border-0">
 					<div class="d-flex justify-content-between align-items-center">
 						<div class="d-flex justify-content-between align-items-center">
-							<div class="ml-2">
-								<div class="h5 m-0">${boardVO.writer}</div>
-							</div>
+						<div class="h5 m-0">@${boardVO.writer}</div>
 						</div>
 						<!-- <div>
 							<div class="dropdown">
@@ -31,7 +29,6 @@
 							</div>
 						</div> -->
 					</div>
-
 				</div>
 				<div class="card-body border-0">
 					<div class="text-muted h7 mb-2">
