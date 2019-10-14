@@ -1,5 +1,5 @@
 [ENG_README.md](ENG_README.md)
-# Spring 기반으로 웹사이트를 제작
+# Spring 기반으로 웹사이트를 제작 (19.09 - ing)
 
 # 동기
 
@@ -21,8 +21,7 @@ Spring, MyBatis, MySQL, AWS EC2, RDS, Bootstrap etc
 
 [기본 CRUD 코드 정리](https://pjs21s.github.io/springcrud/)  
 [Validator 사용](https://pjs21s.github.io/Spring-Validator/)
-
-(추가 예정)
+[TDD 기초](https://pjs21s.github.io/TDDbasic/)
 
 # ETC
 
