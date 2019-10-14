@@ -9,7 +9,7 @@
     <!-- For demo purpose -->
 	<div class="row text-center mb-5">
         <div class="col-lg-8 mx-auto">
-            <h2 class="display-4">많이 읽은 질문</h2>
+            <h2>많이 읽은 질문</h2>
         </div>
 	</div><!-- End -->
         <div class="row">
@@ -18,12 +18,15 @@
                 <ul>
                 	<c:forEach items="${mainList}" var="boardVO">
                 	<li class="bg-white rounded ml-3 p-4 shadow">
-                        <a class="card-link" href='/read?bno=${boardVO.bno}'>
-                        <h2 class="h5 mb-0">${boardVO.title}</h2></a>
+                        <a style="color: black;" class="card-link" href='/read?bno=${boardVO.bno}'>
+                        <span class="h5 mb-0">${boardVO.title}</span></a>
                         <h6 class="mt-4">조회 ${boardVO.viewcnt}</h6>
-						<span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>${boardVO.regdate}</span>
+						<span class="text-muted">
+						<i class="fa fa-clock-o mr-1"></i><fmt:formatDate pattern="yyyy-MM-dd" value="${boardVO.regdate}"/>
+						</span>
                         <p class="text-small mt-2 font-weight-light">${boardVO.content}</p>
                     </li>
+                    <br>
                 	</c:forEach>                   
                 </ul><!-- End -->
             </div>

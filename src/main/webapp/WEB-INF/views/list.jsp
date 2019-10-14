@@ -4,7 +4,7 @@
 <html>
 <body>
 	<div class="container-fluid gedf-wrapper">
-		<div><i class="fas fa-check"></i> 시간순으로 보기 <i class="fas fa-check"></i> 많이 읽은 순으로 보기 <i class="fas fa-check"></i> 좋아요 순으로 보기</div>
+		<!-- <div><i class="fas fa-check"></i> 시간순으로 보기 <i class="fas fa-check"></i> 많이 읽은 순으로 보기 <i class="fas fa-check"></i> 좋아요 순으로 보기</div> -->
 		<c:forEach items="${list}" var="boardVO">
 			<!--Post-->
 			<div class="card gedf-card border-0">
@@ -49,7 +49,7 @@
 	</div>
 	<div class="container-fluid gedf-wrapper">
 	<nav aria-label="Page navigation">
-		<ul class="pagination">
+		<ul class="pagination justify-content-center">
 			<c:if test="${pageMaker.prev}">
 				<li class="page-item"><a class="page-link"
 					href="list${pageMaker.makeSearch(pageMaker.startPage - 1) }"
@@ -73,7 +73,7 @@
 		</ul>
 	</nav>
 	</div>
-	<div class="container-fluid gedf-wrapper">
+	<div class="container-fluid gedf-wrapper d-flex justify-content-center">
 	<form class="form-inline my-2 my-lg-0">
     	<select class="browser-default custom-select" name="searchType">
 		<option value="n"
