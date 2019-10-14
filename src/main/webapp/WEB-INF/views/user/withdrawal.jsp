@@ -10,6 +10,7 @@
 		<div class="row">
 			<div class="col-lg-8">
 				<input class="form-control" type="text" name ="email" value="${login.email}" readonly>
+				<input class="form-control" type="text" name ="name" value="${login.name}" readonly>
 				<input class="form-control" type="text" name ="password" value="${login.password}" readonly>
 				<br>
 				<button type ="submit" class="btn btn-danger">탈퇴</button>

@@ -14,13 +14,13 @@
 					<input class="form-control" type="text" name ="bno" value="${boardVO.bno}" style="display:none;">
 					<h1 class="mt-4">${boardVO.title}</h1>
 					<h6 class="mt-4">조회 ${boardVO.viewcnt}</h6>
-					<p class="lead">by <a href="#">${boardVO.writer}</a></p>
+					<p class="lead">by ${boardVO.writer}</p>
 					<p class="text-primary">
 					<small class="text-muted"><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}"/></small>
 					</p>
 
 					<p>${boardVO.content}</p>
-					<c:if test="${login.email == boardVO.writer}">
+					<c:if test="${login.name == boardVO.writer}">
 						<button type="submit" class="btn btn-warning" formaction="modify"
 							formmethod="get">수정</button>
 						<button type="submit" class="btn btn-danger" formaction="remove"
@@ -44,7 +44,7 @@
 						<form>
 							<div class="form-group">
 								<input class="form-control" type="text" name="bno" value ="${boardVO.bno}" style="display:none;">
-								<input class="form-control" type="text" name="replyWriter" placeholder="작성자" value="${login.email}" style="display:none;" readonly>
+								<input class="form-control" type="text" name="replyWriter" placeholder="작성자" value="${login.name}" style="display:none;" readonly>
 								<c:if test="${not empty login}">
 								<textarea class="form-control" name="replyText">${ReplyVO.replyText}</textarea>
 								</c:if>
@@ -70,7 +70,7 @@
 								<input type="text" name="replyNo" value ="${repList.replyNo}" style="display:none;">
 								<p class="lead">${repList.replyText}</p>
 							</div>
-							<c:if test="${login.email == repList.replyWriter}">
+							<c:if test="${login.name == repList.replyWriter}">
 							<button type="submit" class="btn btn-danger" formaction="reply/delete" formmethod="post">삭제</button>
 							</c:if>
 						</div>
