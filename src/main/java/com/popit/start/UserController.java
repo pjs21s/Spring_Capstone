@@ -32,7 +32,6 @@ public class UserController {
 	public String RegisterPost(@Valid UserVO uservo, BindingResult result, RedirectAttributes rttr) throws Exception{
 		
 		if(result.hasErrors()) {
-			System.out.println("has errors");
 			return "/user/register";
 		}
 		

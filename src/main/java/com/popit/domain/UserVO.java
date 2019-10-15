@@ -1,6 +1,5 @@
 package com.popit.domain;
 
-
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Email;
@@ -13,11 +12,11 @@ public class UserVO {
 	private String email;
 	
 	@NotNull
-	@Length(min=3)
+	@Length(min=3, max=10)
 	private String name;
 	
 	@NotNull
-	@Length(min=6)
+	@Length(min=6, max=20)
 	private String password;
 	
 	public String getEmail() {
