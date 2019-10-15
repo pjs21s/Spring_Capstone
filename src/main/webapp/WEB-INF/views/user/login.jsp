@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 </head>
 <body>
 	<div class="cotainer">
@@ -14,7 +13,6 @@
 					<div class="card-body">
 						<form action="${path}/user/loginPost" method="post">
 							<div class="form-group row">
-
 								<div class="col-md-6 offset-md-4">
 									<input type="text" id="email_address" class="form-control"
 										name="email" placeholder="이메일" required autofocus>
@@ -22,7 +20,6 @@
 							</div>
 
 							<div class="form-group row">
-								
 								<div class="col-md-6 offset-md-4">
 									<input type="password" id="password" class="form-control"
 										name="password" placeholder="비밀번호" required>
@@ -30,8 +27,7 @@
 							</div>
 
 							<div class="col-md-6 offset-md-4">
-								<button type="submit" class="btn btn-primary">로그인
-								</button>
+								<button type="submit" class="btn btn-primary">로그인</button>
 								<!-- <a href="#" class="btn btn-link">비밀번호가 기억나지 않으세요?</a> -->
 							</div>
 						</form>

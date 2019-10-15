@@ -3,7 +3,6 @@
 <%@ include file="/WEB-INF/views/header.jsp" %>
 <html>
 <head>
-
 </head>
 <body>
 상담센터 목록 표시

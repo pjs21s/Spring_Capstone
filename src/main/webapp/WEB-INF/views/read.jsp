@@ -5,7 +5,6 @@
 <head>
 </head>
 <body>
-	<!-- Page Content -->
 	<div class="container">
 		<div class="row">
 			<!-- Post Content Column -->
@@ -18,7 +17,6 @@
 					<p class="text-primary">
 					<small class="text-muted"><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}"/></small>
 					</p>
-
 					<p>${boardVO.content}</p>
 					<div>
 					<c:if test="${login.name == boardVO.writer}">
@@ -37,32 +35,30 @@
 					</div>	
 				</div>
 			</form>
-			
 		</div>
-			<!-- Comments Form -->
-				<div class="card my-4">
-					<h5 class="card-header border-0">답변하기</h5>
-					<div class="card-body border-0">
-						<form>
-							<div class="form-group">
-								<input class="form-control" type="text" name="bno" value ="${boardVO.bno}" style="display:none;">
-								<input class="form-control" type="text" name="replyWriter" placeholder="작성자" value="${login.name}" style="display:none;" readonly>
-								<c:if test="${not empty login}">
-								<textarea class="form-control" name="replyText">${ReplyVO.replyText}</textarea>
-								</c:if>
-								<c:if test="${empty login}">
-								<textarea class="form-control" name="replyText" placeholder="로그인 후 이용해주세요.">${ReplyVO.replyText}</textarea>
-								</c:if>
-							</div>
-							<button type="submit" class="btn btn-primary" formaction="reply/write" formmethod="post">답변</button>
-						</form>
-					</div>
-				</div>
-				<!-- End Comments Form -->
-				
-			<div>
-				<c:forEach items="${repList}" var="repList">
+		<!-- Comments Form -->
+		<div class="card my-4">
+			<h5 class="card-header border-0">답변하기</h5>
+				<div class="card-body border-0">
 					<form>
+						<div class="form-group">
+						<input class="form-control" type="text" name="bno" value ="${boardVO.bno}" style="display:none;">
+						<input class="form-control" type="text" name="replyWriter" placeholder="작성자" value="${login.name}" style="display:none;" readonly>
+						<c:if test="${not empty login}">
+						<textarea class="form-control" name="replyText">${ReplyVO.replyText}</textarea>
+						</c:if>
+						<c:if test="${empty login}">
+						<textarea class="form-control" name="replyText" placeholder="로그인 후 이용해주세요.">${ReplyVO.replyText}</textarea>
+						</c:if>
+						</div>
+						<button type="submit" class="btn btn-primary" formaction="reply/write" formmethod="post">답변</button>
+					</form>
+				</div>
+		</div>
+		<!-- End Comments Form -->
+		<div>
+			<c:forEach items="${repList}" var="repList">
+				<form>
 					<div class="card my-4">
 						<h5 class="card-header border-0">${repList.replyWriter}님의 답변</h5>
 						<div class="card-body border-0">
@@ -77,10 +73,10 @@
 							</c:if>
 						</div>
 					</div>
-					</form>
-				</c:forEach>
-			</div>
+				</form>
+			</c:forEach>
 		</div>
+	</div>
 </body>
 <%@ include file="/WEB-INF/views/footer.jsp" %>
 </html>
