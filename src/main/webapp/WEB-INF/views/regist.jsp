@@ -19,7 +19,9 @@
 	</div>
 </form>
 <script type="text/javascript">
-CKEDITOR.replace('content');
+CKEDITOR.replace('content', {
+	enterMode:CKEDITOR.ENTER_BR
+});
 </script>
 </body>
 <%@ include file="/WEB-INF/views/footer.jsp" %>
