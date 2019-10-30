@@ -20,6 +20,7 @@ public class HomeController {
 	public String home(Model model, RedirectAttributes rttr) throws Exception {
 
 		model.addAttribute("mainList", service.mainList());
+		model.addAttribute("latestmainList", service.latestmainList());
 		return "home";
 	}
 	

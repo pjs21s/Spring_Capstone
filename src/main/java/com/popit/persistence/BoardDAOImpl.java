@@ -84,5 +84,10 @@ public class BoardDAOImpl implements BoardDAO {
 		return session.selectList(namespace + ".mainList");
 	}
 
+	@Override
+	public List<BoardVO> latestmainList() throws Exception {
+		return session.selectList(namespace + ".latestmainList");
+	}
+
 	
 }

@@ -20,7 +20,7 @@
 </form>
 <script type="text/javascript">
 CKEDITOR.replace('content', {
-	enterMode:CKEDITOR.ENTER_BR
+	enterMode:CKEDITOR.ENTER_BR,
 });
 </script>
 </body>

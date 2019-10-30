@@ -68,4 +68,9 @@ public class BoardServiceImpl implements BoardService {
 		return boarddao.mainList();
 	}
 
+	@Override
+	public List<BoardVO> latestmainList() throws Exception {
+		return boarddao.latestmainList();
+	}
+
 }

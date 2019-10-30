@@ -73,12 +73,10 @@ public class BoardController {
 	    pageMaker.setCri(cri);
 	    pageMaker.setTotalCount(service.listSearchCount(cri));//전체목록에 검색페이징 카운트+
 	    model.addAttribute("pageMaker", pageMaker);
-	    
-
 	  }
 	  
-	  @RequestMapping(value = "/centerlist", method = RequestMethod.GET)
-	  public void centerListGET() throws Exception {
-	}
-
+	  @RequestMapping(value = "/map", method = RequestMethod.GET)
+	  public void mapGET() throws Exception {
+		  
+	  }
 }

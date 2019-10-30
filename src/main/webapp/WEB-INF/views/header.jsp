@@ -12,7 +12,7 @@ request.setCharacterEncoding("UTF-8");
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- Google fonts -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic&display=swap&subset=korean" rel="stylesheet">
-<title>쓰담쓰담</title>
+<title>쓰담</title>
 <style>
 body{
 font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
@@ -30,7 +30,7 @@ font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-	<a class="navbar-brand" href="/" style="font-weight:bold;">쓰담쓰담</a>
+	<a class="navbar-brand" href="/" style="font-weight:bold;">쓰담</a>
 	<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
 	</button>
@@ -59,6 +59,9 @@ font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
        			<a class="nav-link" href="/user/profile">프로필</a>
       		</li>
       	</c:if>
+      	<li class="nav-item active">
+       		<a class="nav-link" href="${pageContext.request.contextPath}/map">상담센터 지도보기</a>
+      	</li>
       	<li class="nav-item">
        		<a href="${pageContext.request.contextPath}/regist" class="btn btn-primary">질문하기</a>
       	</li>
