@@ -26,4 +26,5 @@ where user_email = #{email}
 delete from USER
 where user_email = #{email} and user_pw = #{password}
 </delete>
+
 </mapper>

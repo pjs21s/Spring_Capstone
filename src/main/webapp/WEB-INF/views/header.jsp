@@ -54,9 +54,8 @@ font-family: 'Montserrat', 'Nanum Gothic', sans-serif;
       		<li class="nav-item active">
        			<a class="nav-link" href="/user/logout">로그아웃</a>
       		</li>
-      		<li class="nav-item active" style="font-weight:bold;">@${login.name}</li>
-      		<li class="nav-item active">
-       			<a class="nav-link" href="/user/profile">프로필</a>
+      		<li class="nav-item active" style="font-weight:bold;">
+      		<a class="nav-link" href="/user/profile">@${login.name}</a>
       		</li>
       	</c:if>
       	<li class="nav-item active">

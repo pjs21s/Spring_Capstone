@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.popit.domain.BoardVO;
+import com.popit.domain.CategoryVO;
 import com.popit.domain.PageMaker;
 import com.popit.domain.ReplyVO;
 import com.popit.domain.SearchCriteria;
 import com.popit.service.BoardService;
+import com.popit.service.CategoryService;
 import com.popit.service.ReplyService;
 
 @Controller
@@ -28,10 +30,16 @@ public class BoardController {
 	
 	@Inject
 	private ReplyService repservice;
+	
+	@Inject
+	private CategoryService categoryservice;
 
 
 	@RequestMapping(value = "/regist", method = RequestMethod.GET)
 	  public void registerGET(BoardVO boardvo, Model model) throws Exception {
+		List<CategoryVO> categorylist = categoryservice.categorylist();
+		model.addAttribute("categorylist", categorylist);
+		System.out.println(categorylist);
 	}
 
 	@RequestMapping(value = "/regist", method = RequestMethod.POST)
