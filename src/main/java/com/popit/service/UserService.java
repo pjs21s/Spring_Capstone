@@ -12,4 +12,6 @@ public interface UserService {
 	
 	public void withdrawal(LoginDTO loginDTO) throws Exception;
 	
+
+	
 }

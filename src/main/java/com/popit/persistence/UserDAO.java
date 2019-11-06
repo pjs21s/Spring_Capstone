@@ -12,5 +12,7 @@ public interface UserDAO {
 	
 	public void withdrawal(LoginDTO loginDTO) throws Exception;
 	
+	public void updatePoint(String name, int userpoint) throws Exception;
+	
 }
 

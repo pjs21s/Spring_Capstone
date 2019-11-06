@@ -19,6 +19,8 @@ public class UserVO {
 	@Length(min=6, max=20)
 	private String password;
 	
+	private Integer userpoint;
+	
 	public String getEmail() {
 		return email;
 	}
@@ -36,6 +38,12 @@ public class UserVO {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Integer getUserpoint() {
+		return userpoint;
+	}
+	public void setUserpoint(Integer userpoint) {
+		this.userpoint = userpoint;
 	}
 	
 }

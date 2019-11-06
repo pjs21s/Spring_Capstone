@@ -22,8 +22,8 @@ public class BoardDAOTest {
 	public void testCreate() throws Exception {
 		for (int i = 1; i<= 10; i++) {
 			BoardVO vo = new BoardVO();
-			vo.setTitle(i+ "¹øÂ° Á¦¸ñ");
-			vo.setContent(i + "¹øÂ° º»¹®");
+			vo.setTitle(i+ "ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½");
+			vo.setContent(i + "ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½");
 			vo.setWriter("writer" + i);
 			boardDAO.create(vo);
 		}
@@ -38,8 +38,8 @@ public class BoardDAOTest {
 	public void testUpdate() throws Exception {
 		BoardVO vo = new BoardVO();
 		vo.setBno(20);
-		vo.setTitle("Á¦¸ñ");
-		vo.setContent("³»¿ë123");
+		vo.setTitle("ï¿½ï¿½ï¿½ï¿½");
+		vo.setContent("ï¿½ï¿½ï¿½ï¿½123");
 		boardDAO.update(vo);
 	}
 	

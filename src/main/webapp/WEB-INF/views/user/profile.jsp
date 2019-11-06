@@ -12,6 +12,7 @@
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
                     <h2>${login.email}</h2>
+                   <span>기여도 : ${login.userpoint}</span>
                     <!-- <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
                     <p><strong>전공:</strong>
                         <span class="badge badge-primary">Html5</span> 

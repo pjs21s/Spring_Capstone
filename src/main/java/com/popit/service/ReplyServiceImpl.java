@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.popit.domain.ReplyVO;
 import com.popit.persistence.ReplyDAO;
+import com.popit.persistence.UserDAO;
 
 @Service
 public class ReplyServiceImpl implements ReplyService {
@@ -18,6 +19,9 @@ public class ReplyServiceImpl implements ReplyService {
 	public ReplyServiceImpl(ReplyDAO replyDAO) {
 		this.replyDAO = replyDAO;
 	}
+	
+	@Inject
+	private UserDAO userdao;
 
 	@Override
 	public List<ReplyVO> list(Integer bno) throws Exception {
@@ -27,6 +31,7 @@ public class ReplyServiceImpl implements ReplyService {
 	@Override
 	public void create(ReplyVO replyvo) throws Exception {
 		replyDAO.create(replyvo);
+		userdao.updatePoint(replyvo.getReplyWriter(), 5);
 	}
 
 	@Override

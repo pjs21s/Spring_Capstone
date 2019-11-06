@@ -46,10 +46,12 @@ public class UserController {
 	
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
 	public void ProfileGET() throws Exception {
+		
 	}
 	
 	@RequestMapping(value = "/modify", method = RequestMethod.GET)
-	public void ModifyGET() throws Exception {
+	public void ModifyGET(LoginDTO loginDTO) throws Exception {
+		System.out.println(loginDTO);
 	}
 	
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)

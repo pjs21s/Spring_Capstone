@@ -29,10 +29,10 @@
 							formmethod="get">목록</button>
 					</div>
 					
-					<div class="border-0">
+					<!-- <div class="border-0">
 					<a class="btn btn-outline-primary border-0" href="#" role="button"><i class="fas fa-heart"></i></a>
 					<a class="btn btn-outline-primary border-0" href="#" role="button"><i class="fa fa-mail-forward"></i></a>
-					</div>	
+					</div>	 -->
 				</div>
 			</form>
 		</div>

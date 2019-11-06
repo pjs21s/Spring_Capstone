@@ -10,16 +10,21 @@ import com.popit.domain.BoardVO;
 import com.popit.domain.Criteria;
 import com.popit.domain.SearchCriteria;
 import com.popit.persistence.BoardDAO;
+import com.popit.persistence.UserDAO;
 
 @Service
 public class BoardServiceImpl implements BoardService {
 	
 	@Inject
 	private BoardDAO boarddao;
+	
+	@Inject
+	private UserDAO userdao;
 
 	@Override
 	public void regist(BoardVO boardvo) throws Exception {
 		boarddao.create(boardvo);
+		userdao.updatePoint(boardvo.getWriter(), 15);
 	}
 
 	@Override

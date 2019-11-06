@@ -49,7 +49,7 @@ function initMap() {
 	}
 </script>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=본인의키&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key내키&callback=initMap">
 </script>
 </body>
 </html>

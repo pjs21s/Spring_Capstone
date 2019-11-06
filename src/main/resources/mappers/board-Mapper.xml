@@ -3,8 +3,8 @@
 <mapper namespace="com.popit.mapper.BoardMapper">
 
 <insert id="create">
-insert into tbl_board (title, content, writer)
-values(#{title}, #{content}, #{writer})
+insert into tbl_board (title, content, writer, category_name)
+values(#{title}, #{content}, #{writer}, #{categoryname})
 </insert>
 
 <select id="read" resultType="BoardVO">

@@ -9,6 +9,7 @@ public class BoardVO {
 	private String writer;
 	private Date regdate;
 	private int viewcnt;
+	private String categoryname;
 	
 	public Integer getBno() {
 		return bno;
@@ -47,9 +48,16 @@ public class BoardVO {
 		this.viewcnt = viewcnt;
 	}
 	
+	public String getCategoryname() {
+		return categoryname;
+	}
+	public void setCategoryname(String categoryname) {
+		this.categoryname = categoryname;
+	}
+	
 	@Override
 	public String toString() {
 		return "BoardVO [bno=" + bno + ", title=" + title + ", content=" + content + ", writer=" + writer + ", regdate="
-				+ regdate + ", viewcnt=" + viewcnt + "]";
+				+ regdate + ", viewcnt=" + viewcnt + ", categoryname=" + categoryname + "]";
 	}
 }

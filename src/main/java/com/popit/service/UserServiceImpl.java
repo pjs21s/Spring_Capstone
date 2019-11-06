@@ -37,4 +37,7 @@ public class UserServiceImpl implements UserService {
 		userdao.withdrawal(loginDTO);
 	}
 
+
+
+
 }

@@ -1,5 +1,8 @@
 package com.popit.persistence;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -34,6 +37,14 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public void withdrawal(LoginDTO loginDTO) throws Exception {
 		session.delete(namespace + ".withdrawal", loginDTO);
+	}
+
+	@Override
+	public void updatePoint(String name, int userpoint) throws Exception {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("name", name);
+		map.put("userpoint", userpoint);
+		session.update(namespace + ".updatePoint", map);
 	}
 
 	

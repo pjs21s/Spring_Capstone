@@ -12,7 +12,7 @@
 				<select class="custom-select">
   					<option selected>카테고리</option>
   					<c:forEach items="${categorylist}" var="categorylist">
-  						<option value="">${categorylist.categoryname}</option>
+  						<option name="categoryname" value="">${categorylist.categoryname}</option>
   					</c:forEach>
 				</select>
 			
