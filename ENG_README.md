@@ -1,4 +1,4 @@
-# Made website using Spring (19.09 - ing)
+# Made website using Spring (19.09 - 19.11)
 
 # Motivation
 
